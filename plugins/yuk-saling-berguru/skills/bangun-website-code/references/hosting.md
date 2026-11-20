@@ -68,15 +68,23 @@ Berlaku untuk server yang sudah dimiliki artist. Contoh: Hostinger KVM 2 (root p
 - **Catatan.** Satu server untuk banyak web berarti kalau server bermasalah, semua web ikut turun. Karya dan data penting jangan hanya ada di server.
 
 ## Kalau punya atau berencana punya beberapa web
-Studio sering menambah web baru (web per brand, per proyek, atau per kampanye). Tanyakan rencananya di Pemetaan, lalu pilih hosting yang bisa dikelola sekalian:
-- **Satu VPS atau hosting dengan SSH.** Pilihan paling praktis. Satu server melayani banyak domain, satu pengguna deploy per web, dan semua web dirawat di satu tempat. Cocok kalau artist sudah punya server. Risikonya, server bermasalah berarti semua web turun, jadi cadangan di luar server wajib.
-- **Satu akun Cloudflare.** Satu proyek per web, semua dalam satu akun dan satu login. Tidak ada server yang diurus, tapi mengikuti syarat dan batas paket gratisnya, jadi cek batas jumlah proyek dan build di dokumentasi.
+Studio sering menambah web baru (web per brand, per proyek, atau per kampanye). Tanyakan rencananya di Pemetaan, lalu bedakan dulu dua keadaan ini:
+
+**Beberapa web milik satu brand** (misalnya web utama dan web kampanye dari brand yang sama). Boleh dikelola sekalian:
+- **Satu akun Cloudflare atau Netlify.** Satu proyek per web dalam satu akun. Tidak ada server yang diurus, tapi mengikuti syarat dan batas paket gratisnya, jadi cek batas jumlah proyek dan build di dokumentasi.
 - **Shared hosting dengan banyak domain.** Cek apakah paketnya mengizinkan lebih dari satu situs. Paket terkecil sering hanya satu situs.
-- **Nama proyek di hosting.** Di Cloudflare dan penyedia sejenis, nama proyek menjadi bagian dari alamat sementara (misalnya `namaproyek.pages.dev`) yang bisa dilihat publik. Pilih nama dari brand itu sendiri, jangan memakai pola yang sama untuk semua web (misalnya selalu diawali `web-`). Setelah domain sendiri aktif, alihkan alamat sementara ke domain itu supaya tidak ada dua alamat yang tayang.
-- **Kalau tiap web ingin berdiri sendiri.** Beberapa web di satu server memakai alamat IP yang sama, dan siapa pun bisa mengecek domain apa saja yang ada di satu IP. Kalau brand-brand itu memang ingin tampil terpisah, sampaikan pilihan ini ke artist: tiap web di akun hosting sendiri, atau penyedia yang menayangkan web lewat jaringan bersama (misalnya Cloudflare) sehingga IP-nya tidak menunjuk ke satu server milik studio. Keputusannya di artist.
-- **Jejak teknis lain yang perlu dipisah kalau web ingin berdiri sendiri:** satu sertifikat SSL per domain (jangan menggabungkan beberapa domain dalam satu sertifikat, karena daftar domain di sertifikat tercatat publik), kode analitik terpisah per web, perlindungan privasi data pemilik domain dinyalakan di registrar, dan email kontak di web memakai email brand itu sendiri.
-- Satu repo GitHub per web dengan penamaan seragam, dan satu daftar di `README.md` studio yang mencatat web mana ada di hosting mana (tanpa password dan token).
-- Domain tiap web tetap atas nama pemilik brand dan bisa diarahkan ke hosting yang sama.
+- **VPS yang sudah dimiliki artist.** Satu server melayani beberapa domain. Risikonya, server bermasalah berarti semua web turun, jadi cadangan di luar server wajib.
+
+**Web milik brand yang berbeda** (misalnya beberapa studio, atau brand yang ingin tampil terpisah). Setiap web berdiri sendiri sejak awal:
+- Akun hosting, akun Cloudflare, akun GitHub, dan email sendiri per brand, didaftarkan dengan email brand itu.
+- Jangan menaruhnya di satu VPS atau satu akun. Beberapa web di satu server memakai alamat IP yang sama, dan siapa pun bisa mengecek domain apa saja yang ada di satu IP. Domain yang dikelola dalam satu akun Cloudflare juga mendapat pasangan nameserver yang sama, dan itu terlihat publik.
+- Kalau orang yang sama membantu beberapa brand, ia bekerja di akun milik brand yang sedang dikerjakan, bukan memakai akunnya sendiri untuk semua web.
+
+**Berlaku untuk keduanya:**
+- **Nama proyek di hosting.** Di Cloudflare, Netlify, dan penyedia sejenis, nama proyek menjadi bagian dari alamat sementara (misalnya `namaproyek.pages.dev`) yang bisa dilihat publik. Pilih nama dari brand itu sendiri, jangan memakai pola yang sama untuk semua web (misalnya selalu diawali `web-`). Setelah domain sendiri aktif, alihkan alamat sementara ke domain itu supaya tidak ada dua alamat yang tayang.
+- **Jejak teknis yang dipisah per brand:** satu sertifikat SSL per domain (jangan menggabungkan beberapa domain dalam satu sertifikat, karena daftar domain di sertifikat tercatat publik), kode analitik terpisah, perlindungan privasi data pemilik domain dinyalakan di registrar, dan email kontak di web memakai email brand itu sendiri.
+- Satu repo GitHub per web, dengan nama dari brand itu sendiri, bukan pola yang sama untuk semua web. Catat web mana ada di hosting mana di `README.md` tiap proyek (tanpa password dan token).
+- Domain tiap web atas nama pemilik brand.
 
 ## Netlify
 Paket gratis memakai sistem kredit bulanan, dan bandwidth dihitung sebagai kredit. Sumber pihak ketiga menyebut pemakaian komersial diizinkan di paket gratis, tapi cek syarat resminya sebelum menyarankan. Situs berhenti sementara kalau kredit habis, jadi web yang ramai atau penuh gambar besar bisa terkena.

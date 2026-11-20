@@ -18,7 +18,7 @@ Sebelum membuat apa pun, tentukan arah desain dalam tiga baris dan tulis di blue
 7. Teks ditulis seperti artist bicara ke kliennya, bukan kalimat pemasaran umum seperti "Bringing your vision to life".
 8. Harga boleh berupa tabel polos dan FAQ berupa daftar tanya jawab. Angka berurutan hanya untuk isi yang memang berurutan, seperti langkah order.
 9. Cek di lebar HP dulu, lalu laptop. Pengunjung dari media sosial kebanyakan memakai HP.
-10. Kode tidak membawa jejak dari web lain. Nama class, nama variabel warna, dan susunan folder aset disusun untuk proyek ini, tidak disalin dari proyek lain. Hapus komentar bawaan, teks contoh, dan tag generator dari kode yang tayang. Jangan memakai ulang kode, gambar latar, ikon, atau file CSS dari web brand lain yang pernah dibantu.
+10. Kode tidak membawa jejak dari web lain. Nama class, nama variabel warna, nama file CSS dan skrip, serta susunan folder aset disusun untuk proyek ini, tidak disalin dari proyek lain dan tidak selalu sama di setiap web (misalnya tidak selalu `css/style.css` dan `assets/`), karena alamat file itu terlihat di sumber halaman. Hapus komentar bawaan, teks contoh, dan tag generator dari kode yang tayang. Jangan memakai ulang kode, gambar latar, ikon, atau file CSS dari web brand lain yang pernah dibantu.
 
 ## Fitur
 Setiap web punya fitur dasar, lalu satu sampai dua fitur unggulan yang dipilih dari karakter studio. Semua fitur di bawah dibuat dengan HTML, CSS, dan JavaScript biasa tanpa instalasi, jadi tetap jalan di web statis.

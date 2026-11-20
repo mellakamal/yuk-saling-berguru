@@ -12,7 +12,7 @@ Fokus skill ini hanya brand kreatif yang menjual karya, komisi, produk, atau jas
 Pakai juga `tulisan-tanpa-gaya-ai` untuk semua teks berbahasa Indonesia yang dibaca pengguna. Teks publik di web mengikuti Bahasa publik brand (biasanya Inggris untuk pasar global, Indonesia untuk pasar lokal).
 
 ## Cek versi panduan
-Versi panduan ini: 0.6.7. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+Versi panduan ini: 0.6.8. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
 
 "Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
 
@@ -100,18 +100,18 @@ Perpindahan dari chat ke Claude Code adalah bagian yang paling sering macet, ter
 1. Susun isi `BLUEPRINT.md` memakai kerangka di `references/blueprint.md`, lalu tampilkan dalam **satu blok salin**. Blok itu diawali kalimat perintah, lalu seluruh isi blueprint. Pakai pagar empat backtick supaya isi blueprint tidak memotong blok:
 
    ````
-   Buat folder baru bernama web-[nama-studio] di folder ini. Simpan semua teks di bawah garis sebagai BLUEPRINT.md di dalam folder itu. Salin isi folder bahan-web di folder ini ke subfolder bahan di proyek. Lalu baca BLUEPRINT.md dan bangun websitenya di folder itu dengan karya dari folder bahan.
+   Buat folder baru bernama [nama-folder] di folder ini. Simpan semua teks di bawah garis sebagai BLUEPRINT.md di dalam folder itu. Salin isi folder bahan-web di folder ini ke subfolder bahan di proyek. Lalu baca BLUEPRINT.md dan bangun websitenya di folder itu dengan karya dari folder bahan.
    ---
    [seluruh isi BLUEPRINT.md]
    ````
 
-   Ganti `[nama-studio]` dengan nama studio dalam huruf kecil dan tanda hubung, misalnya `web-studio-kahie`.
+   Ganti `[nama-folder]` dengan nama brand dalam huruf kecil dan tanda hubung, misalnya `kebun-kertas`. Jangan menambah awalan atau akhiran yang sama untuk semua proyek (misalnya `web-` atau `-site`), karena nama folder sering terbawa jadi nama repo dan nama proyek di hosting, lalu muncul di alamat publik.
 2. Simpan juga blueprint sebagai dokumen yang bisa dibuka lagi kalau connector tersedia (Google Doc atau Notion).
 3. Berikan langkah pindah ke Claude Code, cukup dua langkah:
    1. Buka aplikasi Claude desktop, masuk ke tab Code, lalu pilih satu folder tempat proyek akan disimpan, misalnya Documents. Kalau komputer bertanya izin akses folder, pilih Izinkan.
    2. Klik tombol salin di blok tadi, tempel ke kolom chat Claude Code, lalu tekan Enter.
 
-   Sebutkan bahwa Claude Code akan membuat folder `web-[nama-studio]` sendiri, menyalin karya dari folder `bahan-web` di Documents, lalu membangun semua halamannya dengan karya asli. Kalau folder `bahan-web` belum ada, Claude Code memakai gambar penanda dulu dan meminta karya dimasukkan setelah pratinjau terbuka. Untuk sesi berikutnya, artist cukup memilih folder `web-[nama-studio]` itu langsung di tab Code.
+   Sebutkan bahwa Claude Code akan membuat folder `[nama-folder]` sendiri, menyalin karya dari folder `bahan-web` di Documents, lalu membangun semua halamannya dengan karya asli. Kalau folder `bahan-web` belum ada, Claude Code memakai gambar penanda dulu dan meminta karya dimasukkan setelah pratinjau terbuka. Untuk sesi berikutnya, artist cukup memilih folder `[nama-folder]` itu langsung di tab Code.
 4. **Cadangan kalau blok salin gagal**, misalnya blok terlalu panjang untuk ditempel atau pengguna memilih cara lama: buat file `BLUEPRINT.md` yang bisa diunduh (dan `desain-kasar.html` kalau ada), lalu pandu: unduh, buat folder proyek, pindahkan file dari Unduhan ke folder itu, buka folder di tab Code, lalu ketik perintah dalam blok kode tersendiri:
 
    ```

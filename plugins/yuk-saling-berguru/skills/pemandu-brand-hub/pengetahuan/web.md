@@ -110,7 +110,7 @@ Aturan memilih: web harus bisa dipindah, bisa dikerjakan Claude Code, dan syarat
 | Ditolak | Vercel Hobby, GitHub Pages, pembuat web tertutup, VPS baru khusus satu web | Vercel Hobby hanya nonkomersial, GitHub Pages tidak untuk usaha online, pembuat web tertutup sulit dibawa pindah, dan VPS baru butuh perawatan yang berlebihan untuk satu portofolio |
 
 Hal yang perlu disampaikan ke artist:
-- Kalau studio berencana punya beberapa web, pilih hosting yang bisa dikelola sekalian (satu VPS atau satu akun), lalu catat web mana ada di hosting mana. Kalau tiap web ingin berdiri sendiri, baca dulu bagian beberapa web di referensi hosting skill bangun-website.
+- Kalau studio berencana punya beberapa web untuk satu brand, hosting boleh dikelola sekalian (satu akun atau satu server). Kalau web-web itu milik brand yang berbeda, setiap web memakai akun hosting, akun Cloudflare, dan email sendiri. Rinciannya di bagian beberapa web di referensi hosting skill bangun-website.
 - Carrd tetap jalur web pertama di Brand Hub. Aturan di atas berlaku untuk web sendiri.
 - Domain didaftarkan atas nama artist sebagai pemilik brand. Domain .id lewat registrar terakreditasi PANDI.
 - Tanyakan harga perpanjangan, bukan hanya harga promo tahun pertama.

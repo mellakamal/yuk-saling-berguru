@@ -59,7 +59,7 @@ Pakai urutan ini. Berhenti di baris pertama yang cocok, lalu beri satu pilihan k
 | Sudah punya VPS atau hosting dengan SSH dan mau mengurusnya | Pakai yang sudah ada | Ikuti bagian VPS dan SSH di `hosting.md` |
 | Butuh panel admin sendiri (tingkat 2 dengan CMS) | Cloudflare atau Netlify | Kalau juga butuh kotak email domain, email diurus di layanan email terpisah |
 | Butuh kotak email domain, bayar rupiah, atau CS lokal | Shared hosting yang menyediakan SSH (contoh untuk dibandingkan: Rumahweb, Niagahoster, Hostinger) | Tanyakan ke CS apakah paketnya punya SSH. Tanpa SSH, artist mengunggah sendiri lewat File Manager |
-| Berencana punya beberapa web dan mau merawat server | VPS | Kalau tidak mau merawat server, satu akun Cloudflare dengan satu proyek per web. Kalau tiap web ingin berdiri sendiri, baca bagian beberapa web di `hosting.md` dulu |
+| Berencana punya beberapa web untuk satu brand dan mau merawat server | VPS | Kalau tidak mau merawat server, satu akun Cloudflare dengan satu proyek per web. Kalau web-web itu milik brand yang berbeda, tiap web memakai akun sendiri, lihat bagian beberapa web di `hosting.md` |
 | Selain itu | Cloudflare, dengan Netlify sebagai cadangan | Gratis, tanpa server. Video disematkan dari YouTube atau Vimeo |
 
 Sebelum menyarankan penyedia, cek ulang syarat resminya sesuai aturan di `hosting.md`. Jangan menyebut harga dari ingatan.

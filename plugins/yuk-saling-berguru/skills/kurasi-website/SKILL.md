@@ -8,7 +8,7 @@ description: "Gunakan saat artist, studio kreatif, atau pemilik usaha punya webs
 Tugas skill ini: memeriksa website yang sudah ada, menilai tiap area, lalu memberi perbaikan yang bisa langsung dikerjakan. Hasilnya harus siap pakai, bukan teori. Pemilik web harus bisa membaca hasilnya dalam dua menit dan tahu apa yang dikerjakan duluan.
 
 ## Cek versi panduan
-Versi panduan ini: 0.6.7. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+Versi panduan ini: 0.6.8. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
 
 "Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
 
