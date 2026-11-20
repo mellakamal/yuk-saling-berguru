@@ -33,3 +33,4 @@ Setiap temuan dibandingkan dengan dua hal: apakah teks atau nama itu sama dengan
 3. Bagian di luar web (Discord, form, akun, pesan) disiapkan Claude sebagai teks siap tempel. Artist yang memasangnya sendiri.
 4. Sarankan perubahan di luar web dikerjakan bertahap dalam satu sampai dua minggu, tidak semuanya di hari yang sama.
 5. Catatan perubahan, pesan commit, dan isi file pegangan ditulis singkat dan netral, misalnya "teks dan tampilan disesuaikan dengan suara brand". Jangan menyebut nama kelas, nama plugin, atau brand lain di file proyek.
+6. Setelah selesai, isi baris "Pembeda" di blueprint bagian 1 dan baris "Alamat halaman" di bagian 3 sesuai hasil cek. Kalau cek dijalankan dari Brand Hub, isi bagian Pembeda di Profil Brand. Baris dan bagian ini juga menandakan cek sudah dijalankan, jadi tawaran cek tidak muncul lagi.

@@ -71,6 +71,9 @@ Kalau artist bilang akunnya sedang diserang, dituduh, atau ramai dibicarakan, be
    - Ada yang Jalan: lanjutkan langkah itu.
    - Selain itu: ambil langkah berikutnya yang belum Selesai, sesuai urutan baris di Tasks. Urutan baris sudah mengikuti Pemetaan, termasuk langkah yang dimajukan.
 5. Baca model bisnis di Profil Brand bagian Layanan. Model ini menentukan isi beberapa langkah.
+   Cek juga apakah Profil Brand sudah punya bagian Pembeda. Kalau belum ada dan sudah ada langkah yang Selesai, Brand Hub ini dibuat dengan versi panduan sebelumnya. Tawarkan sekali, sebelum lanjut ke langkah berikutnya: "Brand Hub ini dibuat dengan versi panduan sebelumnya. Mau aku cek dulu supaya nama channel Discord, form order, bio, dan pesan-pesanmu benar-benar terasa seperti brandmu sendiri? Aku tunjukkan temuannya dulu, kamu yang memutuskan."
+   - Artist setuju: tanyakan pertanyaan pembeda (lihat langkah/00a-pemetaan.md bagian Pembeda), tulis jawabannya di bagian Pembeda, lalu jalankan cek ciri khas brand dari skill kurasi-website (`references/ciri-khas.md`) untuk bagian di luar web. Siapkan teks siap tempel, artist yang memasangnya, bertahap dalam satu sampai dua minggu. Kalau artist punya web, sarankan juga mengetik "cek ciri khas brand" di Claude Code yang dibuka di folder webnya.
+   - Artist menolak atau mau nanti: tambahkan bagian Pembeda berisi "Belum diisi. Cek ciri khas ditunda" dengan tanggal, supaya tawaran ini tidak muncul lagi. Beri tahu artist bahwa ia bisa mengetik "cek ciri khas brand" kapan saja.
 6. Sapa singkat, sebut posisi sekarang dalam satu kalimat (misalnya "Langkah 1 sampai 3 sudah beres, sekarang kita masuk Langkah 4, kurasi karya"), lalu ubah Status langkah itu jadi Jalan.
 7. Buka file langkahnya dan ikuti isinya, sesuai Kondisi langkah itu:
    - Sudah ada: cek cepat memakai "Selesai kalau". Kalau benar sudah terpenuhi, tandai Selesai. Kalau ternyata belum, ubah Kondisi jadi Perlu dirapikan.
