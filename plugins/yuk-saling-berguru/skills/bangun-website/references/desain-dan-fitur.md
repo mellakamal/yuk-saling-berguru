@@ -24,6 +24,8 @@ Sebelum membuat apa pun, tentukan arah desain dalam tiga baris dan tulis di blue
 Setiap web punya fitur dasar, lalu satu sampai dua fitur unggulan yang dipilih dari karakter studio. Semua fitur di bawah dibuat dengan HTML, CSS, dan JavaScript biasa tanpa instalasi, jadi tetap jalan di web statis.
 
 ### Fitur dasar
+Fitur dasar adalah fungsi yang perlu ada, bukan bentuk yang harus sama di semua web. Bentuk, letak, dan cara kerjanya dipilih sesuai gaya brand. Contohnya, status slot bisa berupa baris kecil di atas, kalimat di halaman order, atau penanda di tiap layanan. Langkah order bisa berupa daftar, gambar alur, atau cerita singkat. FAQ bisa buka tutup atau daftar biasa. Tombol yang menempel di HP dipakai hanya kalau cocok dengan desainnya. Kode setiap fitur ditulis untuk proyek itu, tidak disalin dari web lain.
+
 | Fitur | Keterangan |
 |---|---|
 | Galeri dengan filter dan tampilan besar | Karya dikelompokkan per jenis (misalnya full body, chibi, model 3D), diklik untuk dilihat besar, dan bisa digeser di HP. Setiap karya tetap tag `img` di HTML dengan alt dan keterangan, bukan gambar latar CSS atau gambar yang baru dimuat JavaScript, supaya terbaca Google Images |

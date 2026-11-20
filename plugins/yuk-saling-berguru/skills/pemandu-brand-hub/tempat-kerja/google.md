@@ -191,9 +191,9 @@ Connector belum bisa membuat Google Form, jadi pandu artist membuatnya. Berikan 
 
 1. Buka forms.google.com dengan akun Google akun branding, lalu klik Blank form.
 2. Judul form dan deskripsi singkatnya disusun dengan suara brand dalam Bahasa publik. Jangan memakai judul baku yang sama untuk semua brand.
-3. Tambahkan pertanyaan sesuai daftar di langkah/07-jalur-order.md. Untuk Preferred contact pakai pilihan ganda (Discord, Email), dan untuk Service pakai dropdown sesuai price sheet.
+3. Tambahkan pertanyaan sesuai daftar informasi di langkah/07-jalur-order.md, dengan kata-kata yang sudah disusun untuk brand itu. Pilihan cara kontak memakai pilihan ganda sesuai alur order yang dipilih brand, dan layanan memakai dropdown sesuai price sheet.
 4. Klik Settings, buka Responses, lalu nyalakan Collect email addresses (Verified). Kolom Email jadi terisi otomatis.
-5. Masih di Settings, buka Presentation, lalu isi Confirmation message dengan teks dari Langkah 7 berisi link Discord dan arahan ke channel tiket order brand itu.
+5. Masih di Settings, buka Presentation, lalu isi Confirmation message dengan teks dari Langkah 7 sesuai alur order yang dipilih brand, misalnya link Discord dan arahan ke channel tiketnya, atau perkiraan kapan email dibalas.
 6. Buka tab Responses di atas form, klik Link to Sheets, pilih Select existing spreadsheet, lalu pilih Sheet Brand Hub. Google membuat tab baru berisi jawaban form.
 
 Setelah itu kamu yang merapikan Sheet. Tunjukkan dulu rencananya dan kerjakan setelah artist setuju:

@@ -2,7 +2,7 @@
 
 Tujuannya menyiapkan tempat klien dan pengikut ngumpul, dapat info slot lebih dulu, dan melihat proses karya.
 
-Channel order dan tiket harus siap sebelum form di web dipasang (Langkah 7), karena klien yang memilih Discord langsung diarahkan ke sini. Channel komunitas boleh mulai ramai belakangan, setelah web, X, dan Instagram rutin terisi.
+Kalau alur order yang dipilih di Langkah 7 memakai tiket Discord, channel order dan tiket harus siap sebelum form di web dipasang, karena klien yang memilih Discord langsung diarahkan ke sini. Kalau alurnya tidak memakai Discord, server ini cukup untuk komunitas dan pengumuman, dan bagian tiket boleh dilewati. Channel komunitas boleh mulai ramai belakangan, setelah web, X, dan Instagram rutin terisi.
 
 ## Susunan server
 

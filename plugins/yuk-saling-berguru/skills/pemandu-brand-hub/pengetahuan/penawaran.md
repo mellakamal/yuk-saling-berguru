@@ -61,7 +61,14 @@ Ide yang menambah pekerjaan tim ditawarkan sebagai pilihan, lengkap dengan untun
 
 ## ToS
 
-ToS adalah janji tertulis ke klien. Kamu boleh membuatkan draf, tapi angka dan aturannya dicek pemilik. Isi minimal:
+ToS adalah janji tertulis ke klien. Kamu boleh membuatkan draf, tapi angka dan aturannya dicek pemilik.
+
+Cara menyusunnya:
+- Mulai dari aturan dan kata-kata studio sendiri. Minta ToS lama kalau ada, balasan DM yang sering dikirim ke klien, dan aturan yang selalu disampaikan secara lisan. Pakai ungkapan dari situ.
+- Judul bagian, urutan, dan panjangnya mengikuti cara kerja studio itu, misalnya mengikuti tahap kerjanya sendiri. Jangan memakai susunan dan kalimat yang sama untuk semua brand, karena ToS yang mirip kata demi kata dengan brand lain terasa seperti template dan kurang meyakinkan klien.
+- Daftar di bawah hanya cek kelengkapan. Pastikan semua hal ini terjawab, apa pun bentuk tulisannya.
+
+Isi minimal:
 
 1. **Pembayaran:** jalur bayar resmi, skema (lunas di awal, atau DP dan pelunasan), dan kapan file final dikirim.
 2. **Proses:** tahap kerja dan kapan klien diminta menyetujui, misalnya sketsa, model abu-abu, warna.
@@ -84,9 +91,7 @@ Testimoni adalah bukti paling kuat untuk calon klien. Buat sistem, jangan menung
 3. **Tampilkan** di halaman satu lembar, Highlight Instagram, dan deskripsi gig kalau aturan platform mengizinkan.
 4. **Jangan** mengarang testimoni, menukar ulasan dengan diskon, atau meminta ulasan bintang tertentu.
 
-Contoh pesan penutup (bahasa Inggris):
-
-> Thank you for commissioning us. It was a joy to bring [karya] to life. If you are happy with the result, a short review would mean a lot to our small studio. Would you also be okay with us showing this piece and your comment in our portfolio?
+Pesan penutup tidak memakai template. Isi yang perlu ada: terima kasih dengan menyebut karyanya, permintaan ulasan kalau klien puas, dan permintaan izin menampilkan karya dan komentarnya. Claude menyusun kalimatnya dengan suara brand dan menyesuaikannya untuk tiap klien.
 
 ## Klien kembali
 

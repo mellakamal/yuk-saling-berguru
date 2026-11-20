@@ -10,7 +10,7 @@ Semua teks yang akan dipakai admin di langkah ini (judul dan deskripsi gig, pake
 
 ## Urutan kerja
 
-Kerjakan bagian yang tidak bergantung pada langkah lain lebih dulu. Untuk model gig marketplace, urutannya: rapikan platform gig (akses tim, judul, paket, harga, gig baru kalau perlu), lalu WhatsApp Business kalau ada klien lokal. Form order bergantung pada server Discord di Langkah 9, jadi catat sebagai tugas terpisah di Tasks (misalnya 7.5, menunggu Langkah 9), supaya langkah ini tidak macet.
+Kerjakan bagian yang tidak bergantung pada langkah lain lebih dulu. Untuk model gig marketplace, urutannya: rapikan platform gig (akses tim, judul, paket, harga, gig baru kalau perlu), lalu WhatsApp Business kalau ada klien lokal. Kalau alur order yang dipilih memakai tiket Discord, form order bergantung pada server Discord di Langkah 9, jadi catat sebagai tugas terpisah di Tasks (misalnya 7.5, menunggu Langkah 9), supaya langkah ini tidak macet.
 
 ## Harga dan paket
 
@@ -29,6 +29,17 @@ Lihat Positioning dan riset perilaku pembeli. Kalau ada momen penting setelah kl
 ## ToS dan kredit
 
 Untuk klien di luar platform, tawarkan tiga pilihan soal kredit di bio klien: tanpa kredit, kredit opsional, atau kredit wajib dengan biaya tambahan untuk klien yang tidak mau mencantumkan kredit. Pemilik yang memilih. Tidak semua studio butuh eksposur.
+
+## Bentuk alur order
+
+Tidak ada satu alur yang dipakai sama untuk semua brand. Pembeli yang pernah order di dua studio akan merasakan kalau alurnya kembar. Tawarkan dua atau tiga bentuk dengan untung ruginya, sesuai cara kerja studio dan tempat pembelinya berada, lalu pemilik yang memilih. Contoh bentuk:
+- Form di web, lalu percakapan lewat email.
+- Form di web, lalu tiket privat di Discord.
+- Form di web dengan pilihan kontak yang ditentukan studio (misalnya email, Discord, atau WhatsApp untuk klien lokal).
+- Tombol langsung ke platform komisi (misalnya VGen atau Ko-fi) sebagai pintu utama, dan form sebagai pintu kedua.
+- Email dengan daftar hal yang perlu dikirim klien, tanpa form.
+
+Jalur bayar juga dipilih studio dari yang ada perlindungan pembelinya, tidak selalu sama untuk semua brand. Catat bentuk yang dipilih di Profil Brand, lalu sesuaikan Langkah 9 dan form di bawah dengan bentuk itu.
 
 ## Pintu 1. Form order di web
 
@@ -50,7 +61,7 @@ Claude menyusun judul form, kata-kata tiap pertanyaan, urutan, dan teks konfirma
 - **Klien memilih Discord**: halaman terima kasih form langsung menampilkan link undangan server dan arahan ke channel tiket order. Di Tally, pakai fitur redirect atau halaman terima kasih. Di Google Forms, tulis link-nya di pesan konfirmasi. Arahannya ditulis dalam Bahasa publik dengan suara brand, berisi link undangan, nama channel tiket di server itu, dan permintaan menyebut email yang dipakai di form.
 - **Klien memilih Email**: artist membalas lewat email akun dalam waktu yang ditentukan studio sendiri. Tanyakan waktunya, jangan memakai angka bawaan.
 
-Server Discord dengan channel tiket order harus sudah siap sebelum form dipasang. Kalau Langkah 9 belum Selesai, kerjakan bagian channel order dan tiket di Langkah 9 dulu, lalu kembali ke sini.
+Kalau alurnya memakai tiket Discord, server Discord dengan channel tiket order harus sudah siap sebelum form dipasang. Kalau Langkah 9 belum Selesai, kerjakan bagian channel order dan tiket di Langkah 9 dulu, lalu kembali ke sini.
 
 ### Pembayaran
 
@@ -58,7 +69,7 @@ Pembayaran klien global selalu lewat jalur yang ada perlindungan pembeli, misaln
 
 ### Uji coba
 
-Minta artist mengisi form itu sendiri dua kali: sekali memilih Discord (cek apakah link-nya muncul dan bisa membuka tiket), sekali memilih Email (cek apakah jawabannya masuk ke emailnya).
+Minta artist mengisi form itu sendiri sekali untuk setiap pilihan kontak yang ada di form. Cek bahwa arahan di halaman terima kasih muncul, link-nya bisa dibuka, dan jawabannya masuk ke tempat yang benar.
 
 ## Pintu 2. Satu platform komisi
 
@@ -108,4 +119,4 @@ Order dari WhatsApp tidak masuk ke Brand Hub secara otomatis. Saat ada order dea
 
 ## Selesai kalau
 
-Harga dan paket tercatat di tab Daftar Harga, teks siap tempel tersimpan, form order di web aktif dan sudah diuji untuk pilihan Discord dan Email, WhatsApp Business sudah rapi kalau ada klien lokal, dan ada satu platform komisi yang aktif dan aman. Tulis kedua link-nya di Profil Brand. Ubah Status Langkah 7 jadi Selesai.
+Harga dan paket tercatat di tab Daftar Harga, teks siap tempel tersimpan, form order di web aktif dan sudah diuji untuk setiap pilihan kontak di form, WhatsApp Business sudah rapi kalau ada klien lokal, dan ada satu platform komisi yang aktif dan aman. Tulis kedua link-nya di Profil Brand. Ubah Status Langkah 7 jadi Selesai.

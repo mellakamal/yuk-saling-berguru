@@ -34,7 +34,7 @@ Urutan dari atas ke bawah:
 3. **Layanan dan harga:** tiap layanan dengan harga mulai dan isi paket.
 4. **Cara order:** 3 langkah singkat, lalu tombol ke form, platform order, Discord, atau WhatsApp.
 5. **ToS singkat:** 5 sampai 8 poin. Kalau panjang, link ke halaman ToS penuh (halaman Carrd kedua, atau Google Doc publik dari akun Google brand itu sendiri, karena dokumen publik menampilkan nama dan foto akun pemiliknya).
-6. **FAQ:** 4 sampai 6 pertanyaan.
+6. **FAQ:** 4 sampai 6 pertanyaan, diambil dari pertanyaan yang benar-benar sering ditanyakan klien studio itu (dari DM, tiket, atau email), bukan daftar pertanyaan baku.
 7. **Akun resmi:** daftar semua akun resmi, berguna kalau ada akun palsu (lihat bangkit-lagi.md).
 
 ### Cara memandu

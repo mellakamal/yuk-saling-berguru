@@ -9,7 +9,7 @@
       "name": "yuk-saling-berguru",
       "source": "./plugins/yuk-saling-berguru",
       "description": "Kumpulan skill untuk peserta kelas Yuk Saling Berguru: resume meeting, slide presentasi, tulisan tanpa gaya AI, pemandu Brand Hub, dan bangun website dari nol untuk non-programmer (di chat dan di Claude Code), dan kurasi website yang sudah jadi.",
-      "version": "0.6.3"
+      "version": "0.6.4"
     }
   ]
 }

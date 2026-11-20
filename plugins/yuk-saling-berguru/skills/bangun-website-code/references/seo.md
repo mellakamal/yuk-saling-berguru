@@ -23,7 +23,7 @@ Kerjakan per halaman, lalu tampilkan hasilnya dalam satu tabel (halaman, judul, 
 10. Jalankan skrip pengecek pada folder yang tayang: `python3 -I <folder skill>/references/cek-seo.py site`. Jangan jalankan pada folder proyek, karena `desain-kasar.html` dan file di `bahan/` ikut terperiksa. Skrip memeriksa panjang judul dan deskripsi, judul atau deskripsi kembar, satu H1, canonical, lang, viewport, gambar pratinjau, alt gambar, tautan rusak, noindex, dan isi sitemap. Perbaiki sampai hasilnya LOLOS. Jangan menebak panjang teks. Kalau skrip tidak bisa dijalankan, katakan jujur dan hitung panjangnya dengan cara lain.
 11. Laporan kecepatan dengan Lighthouse kalau terpasang, skor sebelum dan sesudah. Kalau tidak bisa dijalankan, katakan jujur dan lewati.
 
-Selama domain belum ada, alamat di sitemap, canonical, dan gambar pratinjau memakai alamat sementara hosting. Kalau web belum pernah tayang, alamat sementara belum diketahui (di Cloudflare bentuknya bergantung nama akun). Pakai satu alamat contoh yang dicatat di CLAUDE.md, lalu ganti di semua halaman setelah penayangan pertama. Perbarui ke domain final di Tahap 8, dan alihkan alamat sementara ke domain baru.
+Selama domain belum ada, alamat di sitemap, canonical, dan gambar pratinjau memakai alamat sementara hosting. Kalau web belum pernah tayang, alamat sementara belum diketahui (di Cloudflare bentuknya bergantung nama proyek). Pakai satu alamat contoh yang dicatat di CLAUDE.md, lalu ganti di semua halaman setelah penayangan pertama. Perbarui ke domain final di Tahap 8, dan alihkan alamat sementara ke domain baru.
 
 ## Tahap 9: daftar ke Google
 Dikerjakan setelah web tayang di alamat finalnya.
