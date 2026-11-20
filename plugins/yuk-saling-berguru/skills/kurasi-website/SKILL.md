@@ -7,6 +7,13 @@ description: "Gunakan saat artist, studio kreatif, atau pemilik usaha punya webs
 
 Tugas skill ini: memeriksa website yang sudah ada, menilai tiap area, lalu memberi perbaikan yang bisa langsung dikerjakan. Hasilnya harus siap pakai, bukan teori. Pemilik web harus bisa membaca hasilnya dalam dua menit dan tahu apa yang dikerjakan duluan.
 
+## Cek versi panduan
+Versi panduan ini: 0.6.7. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+
+"Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
+
+Lalu lanjut mengerjakan permintaan pengguna. Kalau versinya sama, link tidak bisa dibuka, atau pengguna tidak mengizinkan, lewati tanpa menyebutnya. Jangan cek lebih dari sekali dalam satu sesi.
+
 ## 1. Kenali bahan yang masuk
 
 Bahan bisa datang dalam empat bentuk. Tiap bentuk punya batas cek yang berbeda, jadi sebutkan batas itu di hasil supaya pemilik web tidak mengira semua sudah diperiksa.
@@ -32,7 +39,7 @@ Pemeriksaan disusun berlapis supaya hasil tetap fokus. Baca hanya file referensi
 | Cek per halaman | Selalu (one-page: per section) | `references/per-halaman.md` |
 | Simulasi calon pembeli | Selalu | `references/simulasi-pembeli.md` |
 | Checklist niche | Otomatis kalau web melayani VTuber/Live2D, ilustrasi, maskot, buku anak, game asset, atau TTRPG | `references/niche.md` |
-| Cek ciri khas brand | Kalau pengguna bilang "cek ciri khas brand", atau web dan jalur order dibuat sebelum panduan meminta nama dan teks disusun dari suara brand | `references/ciri-khas.md` |
+| Cek ciri khas brand | Kalau pengguna bilang "cek ciri khas brand". Otomatis kalau web milik artist atau studio kreatif dan salah satu ini benar: folder proyek tidak punya `BLUEPRINT.md`, blueprint belum punya baris "Pembeda" dan "Alamat halaman", atau bahan hanya berupa link atau screenshot sehingga versinya tidak bisa diketahui. Dalam mode kurasi, cek ini hanya membaca dan melaporkan | `references/ciri-khas.md` |
 | Kurasi ulang | Otomatis kalau ada hasil kurasi sebelumnya atau pengguna bilang "kurasi ulang"/"cek lagi" | `references/kurasi-ulang.md` |
 | Klien internasional | Otomatis kalau ada teks Inggris, harga USD, link Fiverr/Upwork/VGen, atau target luar negeri | `references/mode-lanjutan.md` bagian A |
 | Angka teknis terukur | Otomatis kalau bahan berupa link live atau kode | `references/mode-lanjutan.md` bagian B, `scripts/kontras.py` |
@@ -64,6 +71,8 @@ Dua skill lain di plugin ini dipakai sebagai patokan supaya penilaian sejalan de
 11. Kepercayaan dan kontak
 
 Kalau suatu area tidak berlaku (misalnya web tidak menjual apa pun sehingga area Harga kosong), tulis "Tidak berlaku" dan jangan dipaksakan.
+
+Kalau bahan berupa folder proyek dan tidak ada `BLUEPRINT.md`, `CLAUDE.md`, atau `README.md`, masukkan sebagai temuan Penting di Daftar perbaikan. Tanpa file itu, setiap sesi Claude harus menebak rencana dan keputusan web dari kode, sehingga perbaikan berikutnya mudah keliru. Jadikan butir pertama di prompt: "Buat BLUEPRINT.md, CLAUDE.md, dan README.md dari kode yang ada sebelum mengubah apa pun, ikuti skill bangun-website-code. Tanyakan pembeda studio dan isi baris Pembeda serta Alamat halaman di blueprint."
 
 ## 3. Bedakan fakta dan penilaian
 

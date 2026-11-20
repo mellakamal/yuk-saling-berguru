@@ -61,6 +61,13 @@ Kalau layanan brand tidak cocok dengan file mana pun, pakai otak-marketing.md da
 
 Kalau artist bilang akunnya sedang diserang, dituduh, atau ramai dibicarakan, berhenti dari alur dan baca `langkah/kalau-diserang.md`.
 
+## Cek versi panduan
+Versi panduan ini: 0.6.7. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+
+"Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
+
+Lalu lanjut mengerjakan permintaan pengguna. Kalau versinya sama, link tidak bisa dibuka, atau pengguna tidak mengizinkan, lewati tanpa menyebutnya. Jangan cek lebih dari sekali dalam satu sesi.
+
 ## Cara mulai atau melanjutkan
 
 1. Kalau artist menempelkan "Catatan untuk dilanjutkan", baca dulu. Artinya Tahap A dan Langkah 1 sudah dikerjakan, dan sekarang waktunya Tahap B.

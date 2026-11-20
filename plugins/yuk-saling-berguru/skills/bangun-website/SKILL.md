@@ -11,6 +11,13 @@ Fokus skill ini hanya brand kreatif yang menjual karya, komisi, produk, atau jas
 
 Pakai juga `tulisan-tanpa-gaya-ai` untuk semua teks berbahasa Indonesia yang dibaca pengguna. Teks publik di web mengikuti Bahasa publik brand (biasanya Inggris untuk pasar global, Indonesia untuk pasar lokal).
 
+## Cek versi panduan
+Versi panduan ini: 0.6.7. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+
+"Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
+
+Lalu lanjut mengerjakan permintaan pengguna. Kalau versinya sama, link tidak bisa dibuka, atau pengguna tidak mengizinkan, lewati tanpa menyebutnya. Jangan cek lebih dari sekali dalam satu sesi.
+
 ## Prinsip
 1. Pengguna tidak perlu paham kode. Jelaskan setiap istilah teknis dengan bahasa sehari-hari saat pertama muncul, misalnya hosting (tanah tempat rumah berdiri), domain (alamat rumah), repository atau repo (lemari arsip semua file web).
 2. Satu tahap, satu prompt. Setiap prompt untuk Claude Code ditulis utuh dalam satu blok yang tinggal disalin. Jangan memecah jadi beberapa potong.
