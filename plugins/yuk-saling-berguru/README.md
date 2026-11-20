@@ -12,7 +12,7 @@ Plugin berisi tujuh skill yang dipakai di kelas Yuk Saling Berguru. Pasang sekal
 | Pemandu Brand Hub | "mulai panduan Brand Hub", "lanjut panduan" | Memandu artist atau studio membangun akun branding dari nol |
 | Bangun website | "bikin website", "lanjut web" di chat | Untuk artist dan studio kreatif: menyusun blueprint di chat, lalu memberi prompt bertahap untuk Claude Code |
 | Bangun website di Code | "bikin website", "lanjut web" di dalam Claude Code | Memandu dan membangun website langsung di folder proyek, dari pemetaan sampai tayang dan SEO |
-| Kurasi website | "kurasi website" plus link, screenshot, atau folder proyek. "kurasi lengkap" untuk ikut membandingkan pesaing, "kurasi ulang" setelah diperbaiki | Menilai web yang sudah jadi di 11 area, mensimulasikan calon pembeli, lalu memberi prompt perbaikan siap tempel untuk Claude Code |
+| Kurasi website | "kurasi website" plus link, screenshot, atau folder proyek. "kurasi lengkap" untuk ikut membandingkan pesaing, "kurasi ulang" setelah diperbaiki, "cek ciri khas brand" untuk web dan jalur order yang dibuat dengan panduan lama | Menilai web yang sudah jadi di 11 area, mensimulasikan calon pembeli, lalu memberi prompt perbaikan siap tempel untuk Claude Code |
 
 ## Sebelum mulai
 - Saat pertama memakai resume meeting atau slide, Claude akan menanyakan nama, palet warna, dan font. Kalau belum punya font brand, Claude menawarkan tiga pasangan font. Simpan jawabannya sebagai preferensi agar tidak ditanya lagi.

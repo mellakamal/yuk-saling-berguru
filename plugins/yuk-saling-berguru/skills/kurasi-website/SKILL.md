@@ -1,6 +1,6 @@
 ---
 name: kurasi-website
-description: "Gunakan saat artist, studio kreatif, atau pemilik usaha punya website yang sudah jadi atau sudah tayang dan ingin dinilai: skor 11 area, simulasi calon pembeli, checklist niche artist, angka teknis, lalu daftar perbaikan dan prompt perbaikan siap tempel untuk Claude Code. Pemicu: \"kurasi website\", \"kurasi web\", \"kurasi lengkap\", \"kurasi ulang\", \"review web\", \"audit website\", \"cek website ini\", \"nilai web saya\", \"apa yang kurang dari web ini\", atau saat pengguna mengirim link, screenshot, file HTML, atau folder proyek web sambil minta masukan. Untuk membangun web dari nol pakai bangun-website atau bangun-website-code. Untuk memilih karya yang akan dipajang (kurasi karya di Brand Hub) pakai pemandu-brand-hub."
+description: "Gunakan saat artist, studio kreatif, atau pemilik usaha punya website yang sudah jadi atau sudah tayang dan ingin dinilai: skor 11 area, simulasi calon pembeli, checklist niche artist, angka teknis, lalu daftar perbaikan dan prompt perbaikan siap tempel untuk Claude Code. Pemicu: \"kurasi website\", \"kurasi web\", \"kurasi lengkap\", \"kurasi ulang\", \"cek ciri khas brand\", \"review web\", \"audit website\", \"cek website ini\", \"nilai web saya\", \"apa yang kurang dari web ini\", atau saat pengguna mengirim link, screenshot, file HTML, atau folder proyek web sambil minta masukan. Untuk membangun web dari nol pakai bangun-website atau bangun-website-code. Untuk memilih karya yang akan dipajang (kurasi karya di Brand Hub) pakai pemandu-brand-hub."
 ---
 
 # Kurasi Website
@@ -32,6 +32,7 @@ Pemeriksaan disusun berlapis supaya hasil tetap fokus. Baca hanya file referensi
 | Cek per halaman | Selalu (one-page: per section) | `references/per-halaman.md` |
 | Simulasi calon pembeli | Selalu | `references/simulasi-pembeli.md` |
 | Checklist niche | Otomatis kalau web melayani VTuber/Live2D, ilustrasi, maskot, buku anak, game asset, atau TTRPG | `references/niche.md` |
+| Cek ciri khas brand | Kalau pengguna bilang "cek ciri khas brand", atau web dan jalur order dibuat sebelum panduan meminta nama dan teks disusun dari suara brand | `references/ciri-khas.md` |
 | Kurasi ulang | Otomatis kalau ada hasil kurasi sebelumnya atau pengguna bilang "kurasi ulang"/"cek lagi" | `references/kurasi-ulang.md` |
 | Klien internasional | Otomatis kalau ada teks Inggris, harga USD, link Fiverr/Upwork/VGen, atau target luar negeri | `references/mode-lanjutan.md` bagian A |
 | Angka teknis terukur | Otomatis kalau bahan berupa link live atau kode | `references/mode-lanjutan.md` bagian B, `scripts/kontras.py` |
