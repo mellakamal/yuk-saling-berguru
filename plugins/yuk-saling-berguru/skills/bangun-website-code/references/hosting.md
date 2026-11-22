@@ -9,13 +9,13 @@ Dibaca bersama `pilihan-teknologi.md` saat memilih teknologi dan tempat tayang (
 4. **Leluasa untuk fitur dan akses Claude Code.** Penyedia punya perintah baris atau penayangan lewat Git, plus fungsi sisi server untuk form dan data kecil. Dengan begitu Claude bisa menayangkan dan menambah fitur sendiri setelah artist login. Unggah manual lewat panel membatasi itu.
 
 ## Pilihan tempat tayang
-Untuk peserta Yuk Saling Berguru, tawarkan tiga pilihan ini dalam satu tabel. Artist yang memutuskan, dan boleh memutuskan nanti di tahap Tayang.
+Untuk peserta Yuk Saling Berguru, selalu tawarkan tiga pilihan ini dalam satu tabel dengan untung rugi yang seimbang. Syarat utamanya hosting bisa diakses Claude Code, dan aturan label "(Recommended)" ada di bagian Rekomendasi `pilihan-teknologi.md`. Artist yang memutuskan, dan boleh memutuskan nanti di awal Tahap 7.
 
 | Pilihan | Cocok untuk | Untungnya | Yang perlu diterima |
 |---|---|---|---|
 | **Cloudflare Pages** | Web HTML biasa seperti hasil kelas | Gratis, HTTPS otomatis, alamat `nama.pages.dev` langsung jadi, domain sendiri bisa menyusul. Claude Code bisa mengurus dari awal sampai tayang | Butuh akun GitHub dan akun Cloudflare. Belum termasuk email dengan nama domain |
-| **Rumahweb** | Artist yang butuh email dengan nama domain sendiri, atau lebih nyaman dengan penyedia lokal | Bayar dalam rupiah, dukungan berbahasa Indonesia, domain dan email dalam satu tempat | Berbayar. Cek apakah paketnya menyediakan akses SSH supaya Claude Code bisa ikut mengurus |
-| **VPS Hostinger** | Artist atau studio yang ingin satu server untuk beberapa web, atau berencana punya fitur yang butuh server sendiri | Akses penuh lewat SSH, jadi Claude Code bisa mengurus server dan web dari awal sampai tayang. Satu server bisa menampung beberapa web | Berbayar. Pemilik bertanggung jawab atas keamanan, pembaruan, dan cadangan server. Saat dipilih, jalankan bagian Khusus VPS di `keamanan.md` sebelum web tayang |
+| **Rumahweb** | Artist yang butuh email dengan nama domain sendiri, atau lebih nyaman dengan penyedia lokal | Bayar dalam rupiah, dukungan berbahasa Indonesia, domain dan email dalam satu tempat | Berbayar. Pilih paket yang menyediakan SSH supaya Claude Code bisa ikut mengurus dan memperbaiki. Daftar paketnya ada di bagian Paket yang menyediakan SSH di `pilihan-teknologi.md` |
+| **VPS Hostinger** | Artist yang ingin satu server untuk beberapa web milik brand yang sama, atau berencana punya fitur yang butuh server sendiri | Akses penuh lewat SSH, jadi Claude Code bisa mengurus server dan web dari awal sampai tayang. Satu server bisa menampung beberapa web milik brand yang sama | Berbayar. Pemilik bertanggung jawab atas keamanan, pembaruan, dan cadangan server. Saat dipilih, jalankan bagian Khusus VPS di `keamanan.md` sebelum web tayang |
 
 Penyedia lain di tabel Urutan pilihan di bawah hanya dibahas kalau artist menanyakannya atau sudah punya hosting sendiri. Kalau artist memilih VPS, ikuti bagian Khusus VPS di `keamanan.md`.
 
@@ -28,7 +28,8 @@ Tabel ini daftar penyedia yang layak, diurutkan dari akses Claude Code yang pali
 | 0 | **VPS atau hosting dengan akses SSH yang sudah dimiliki artist** (misalnya Hostinger KVM, atau paket Rumahweb yang menyediakan SSH) | Artist yang sudah membayar dan terbiasa mengurusnya, atau punya beberapa web di satu server | Akses Claude paling leluasa. Lihat bagian VPS dan SSH di bawah |
 | 1 | **Cloudflare** (Pages atau Workers Static Assets), paket gratis | Web portofolio statis yang ingin dikerjakan Claude Code dari awal sampai tayang | Lihat bagian Cloudflare di bawah. Syarat paket gratis bisa berubah |
 | 2 | **Netlify**, paket gratis | Cadangan kalau Cloudflare tidak cocok | Memakai sistem kredit bulanan. Situs berhenti sementara kalau kredit habis |
-| 3 | **Shared hosting berbayar** (penyedia lokal atau global) | Artist yang butuh email dengan nama domain sendiri, ingin bayar dalam rupiah, atau butuh dukungan berbahasa Indonesia, dan menerima akses Claude yang terbatas | Unggah manual lewat File Manager, karena FTP butuh password yang tidak boleh ditangani Claude. Fitur sisi server bergantung paket. Kalau paketnya menyediakan SSH, Claude bisa menayangkan lewat kunci SSH yang dibuat artist |
+| 3 | **Shared hosting berbayar dengan SSH** (penyedia lokal atau global) | Artist yang butuh email dengan nama domain sendiri, ingin bayar dalam rupiah, atau butuh dukungan berbahasa Indonesia | Claude bisa menayangkan dan memperbaiki lewat kunci SSH yang dibuat artist. Fitur sisi server bergantung paket |
+| Terakhir | **Shared hosting tanpa SSH** | Hanya kalau tidak ada pilihan lain | Claude Code tidak bisa memperbaiki web langsung di server. Claude menyiapkan folder, artist mengunggah sendiri lewat File Manager setiap ada perubahan, karena FTP butuh password yang tidak boleh ditangani Claude. Sampaikan konsekuensi ini sebelum artist memilih |
 | Opsional | **Vercel Pro** (berbayar) | Artist yang ingin alur Git yang paling mulus dan tidak keberatan biaya dalam dolar per anggota | Hanya Pro. Cek harga terbaru di halaman harga Vercel |
 
 Yang ditolak untuk web yang menerima order:

@@ -6,10 +6,10 @@ Tujuannya artist memilih sendiri jenis web dan hosting sesuai kebutuhannya, deng
 
 ## Langkah memilih
 1. Ajukan pertanyaan di bawah dalam satu daftar bernomor, dengan keterangan singkat di tiap nomor. Lewati yang sudah terjawab di bahan, Brand Hub, atau obrolan sebelumnya.
-2. Dari jawabannya, tentukan tingkat web (bagian Empat tingkat web) dan sebutkan ke artist dalam satu kalimat dengan analogi rumah, misalnya "Kebutuhanmu cukup tingkat 2: rumah jadi dengan loket titipan untuk form order." Kalau ternyata artist butuh tingkat yang lebih tinggi dari dugaannya, atau lebih rendah, jelaskan bedanya. Lalu tentukan hosting (bagian Rekomendasi). Beri paling banyak dua pilihan, masing-masing dengan untung dan ruginya, lalu sarankan satu.
+2. Dari jawabannya, tentukan tingkat web (bagian Empat tingkat web) dan sebutkan ke artist dalam satu kalimat dengan analogi rumah, misalnya "Kebutuhanmu cukup tingkat 2: rumah jadi dengan loket titipan untuk form order." Kalau ternyata artist butuh tingkat yang lebih tinggi dari dugaannya, atau lebih rendah, jelaskan bedanya. Lalu tampilkan tiga pilihan hosting sesuai bagian Rekomendasi, masing-masing dengan untung dan ruginya. Label "(Recommended)" hanya kalau alasannya dari jawaban artist.
 3. Jelaskan dua arti "bebas" (bagian Dua arti bebas), karena artist sering memilih hosting berdasarkan kata itu.
 4. Artist yang memutuskan. Tulis tingkat web, hosting, dan alasannya di bagian 8 dan Catatan keputusan blueprint.
-5. Kalau artist belum yakin, tulis "belum ditentukan, condong ke [rekomendasi]". Pembangunan di laptop tetap jalan karena web statis bisa ditaruh di hosting mana saja. Keputusan final paling lambat di awal Tahap 7. Selama belum diputuskan, Claude Code tidak membuat file pengaturan hosting.
+5. Kalau artist belum bisa memutuskan, tulis "belum ditentukan". Pembangunan di laptop tetap jalan karena web statis bisa ditaruh di hosting mana saja. Tanyakan lagi di awal Tahap 7. Selama belum diputuskan, Claude Code tidak membuat file pengaturan hosting.
 
 ## Pertanyaan
 Buka daftar pertanyaan dengan satu kalimat seperti ini, supaya artist tahu kenapa ditanya: "Dua pertanyaan pertama menentukan apakah web kamu cukup statis (isinya diganti lewat Claude) atau perlu bagian yang dinamis (panel admin, form yang menyimpan data, status slot komisi). Sisanya untuk memilih hosting."
@@ -52,17 +52,38 @@ Kalau ragu di antara dua tingkat, pilih yang lebih rendah. Naik tingkat nanti ti
 Urutan keleluasaan Claude Code untuk web seperti ini: VPS (paling leluasa, tapi artist merawat server), Cloudflare atau Netlify (sangat leluasa, tanpa server), shared hosting dengan SSH (hampir sama, tapi domain dan fitur lebih banyak lewat panel), lalu shared hosting tanpa SSH (Claude menyiapkan folder, artist mengunggah lewat File Manager). Kenyamanan Claude bukan alasan utama memilih. Yang menentukan kebutuhan artist.
 
 ## Rekomendasi
-Pakai urutan ini. Berhenti di baris pertama yang cocok, lalu beri satu pilihan kedua yang masuk akal.
+**Syarat utama:** hosting harus bisa diakses Claude Code, supaya kalau web bermasalah artist bisa langsung dibantu Claude Code. Yang memenuhi: Cloudflare (artist login sendiri lewat `wrangler login`), shared hosting yang menyediakan SSH, dan VPS. Paket tanpa SSH hanya pilihan terakhir, dengan peringatan ke artist: Claude Code tidak bisa memperbaiki web langsung di server, jadi setiap perbaikan harus diunggah artist sendiri lewat File Manager.
 
-| Kalau | Sarankan | Catatan |
+**Selalu tampilkan tiga pilihan** dalam satu tabel dengan untung rugi yang seimbang: Cloudflare, Rumahweb (paket yang menyediakan SSH), dan VPS Hostinger. Isinya dari tabel Pilihan tempat tayang di `hosting.md`. Jangan ada pilihan bawaan. Label "(Recommended)" hanya diberikan kalau alasannya berasal dari jawaban artist di daftar pertanyaan, dan alasan itu ditulis di deskripsi pilihan itu, misalnya "Kamu butuh email hello@namabrand.com dan lebih nyaman bayar rupiah". Kalau jawaban artist tidak mengarah ke satu pilihan, tampilkan ketiganya tanpa label.
+
+Petunjuk membaca jawaban artist. Ini hanya untuk menentukan label dan alasannya, bukan urutan bawaan:
+
+| Jawaban artist | Pilihan yang cocok | Alasan yang ditulis di deskripsi |
 |---|---|---|
-| Sudah punya VPS atau hosting dengan SSH dan mau mengurusnya | Pakai yang sudah ada | Ikuti bagian VPS dan SSH di `hosting.md` |
-| Butuh panel admin sendiri (tingkat 2 dengan CMS) | Cloudflare atau Netlify | Kalau juga butuh kotak email domain, email diurus di layanan email terpisah |
-| Butuh kotak email domain, bayar rupiah, atau CS lokal | Shared hosting yang menyediakan SSH (contoh untuk dibandingkan: Rumahweb, Niagahoster, Hostinger) | Tanyakan ke CS apakah paketnya punya SSH. Tanpa SSH, artist mengunggah sendiri lewat File Manager |
-| Berencana punya beberapa web untuk satu brand dan mau merawat server | VPS | Kalau tidak mau merawat server, satu akun Cloudflare dengan satu proyek per web. Kalau web-web itu milik brand yang berbeda, tiap web memakai akun sendiri, lihat bagian beberapa web di `hosting.md` |
-| Selain itu | Cloudflare, dengan Netlify sebagai cadangan | Gratis, tanpa server. Video disematkan dari YouTube atau Vimeo |
+| Sudah punya VPS atau hosting dengan SSH dan mau mengurusnya | Yang sudah dimiliki | Sudah dibayar, dan Claude Code bisa masuk lewat SSH. Ikuti bagian VPS dan SSH di `hosting.md` |
+| Butuh panel admin sendiri (tingkat 2 dengan CMS berbasis Git) | Cloudflare | CMS berbasis Git butuh penayangan langsung dari GitHub. Kotak email domain diurus di layanan email terpisah |
+| Butuh kotak email domain, bayar rupiah, atau CS berbahasa Indonesia | Rumahweb, paket yang menyediakan SSH | Email domain, rupiah, dan CS lokal dalam satu tempat, dan Claude Code tetap bisa masuk lewat SSH |
+| Beberapa web untuk satu brand, atau fitur yang butuh server sendiri, dan mau merawat server | VPS Hostinger | Satu server untuk beberapa web milik brand itu. Pemilik merawat keamanan, pembaruan, dan cadangan |
+| Web milik brand yang berbeda | Setiap web memakai akun sendiri | Lihat bagian beberapa web di `hosting.md` |
+
+Kalau artist belum bisa memutuskan, tulis "belum ditentukan" di bagian 8 blueprint dan tanyakan lagi di awal Tahap 7. Netlify dan penyedia lain hanya dibahas kalau artist menanyakannya atau sudah memakainya.
 
 Sebelum menyarankan penyedia, cek ulang syarat resminya sesuai aturan di `hosting.md`. Jangan menyebut harga dari ingatan.
+
+## Paket yang menyediakan SSH
+Dicek dari halaman resmi penyedia pada 22 November 2026. Syarat paket bisa berubah, jadi cek ulang di halaman paketnya sebelum artist membeli.
+
+| Penyedia | Paket | SSH | Sumber |
+|---|---|---|---|
+| Rumahweb | Hosting Murah: Entry, Small, Medium, Large | Ada, tertulis "Akses SSH" di setiap paket | rumahweb.com/hosting-murah |
+| Rumahweb | Unlimited Hosting: Grow dan Bloom | Ada, tertulis "Akses SSH" | rumahweb.com/unlimited-hosting |
+| Rumahweb | Unlimited Hosting: Seed | Tidak disebut, cek ke CS | rumahweb.com/unlimited-hosting |
+| Rumahweb | Cloud Hosting (semua paket) | Ada, SSH tanpa akses root | rumahweb.com/cloud-hosting |
+| Rumahweb | WordPress Hosting | Tidak disebut, cek ke CS. WordPress juga tidak ditawarkan di skill ini | rumahweb.com/wordpress-hosting |
+| Hostinger | Shared hosting: Single, Premium, Unlimited, dan Cloud | Tidak disebut per paket, cek ke CS. Halaman tanya jawabnya hanya menyebut SSH secara umum | hostinger.com/id/hosting-murah dan hostinger.com/id/web-hosting |
+| Hostinger | VPS KVM 1, KVM 2, KVM 4, KVM 8 | Akses root penuh disebut, SSH tidak ditulis per paket. VPS dikelola lewat SSH, tapi pastikan ke CS | hostinger.com/id/vps-hosting |
+
+Rumahweb dan Hostinger sama-sama menyebut server LiteSpeed, jadi aturan `.htaccess` di `tampil-profesional.md` berlaku.
 
 ## Pengaruh pilihan ke tahap kerja
 | Hosting | Yang berubah |

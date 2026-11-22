@@ -54,13 +54,15 @@ Pakai pertanyaan ini sebagai alat bantu, bukan formulir. Tidak semua pertanyaan 
 - Galeri karya nyaman di-scroll, gambar tidak terlalu kecil?
 
 ## 9. Kecepatan dan teknis
-- Ukuran gambar besar (di atas sekitar 500 KB per gambar)? Sudah format WebP/AVIF?
+- Ukuran gambar besar (di atas sekitar 300 KB per gambar)? Sudah format WebP/AVIF? Setiap gambar punya `width` dan `height`?
+- Alamat halaman tanpa `.html` (`/nama-halaman`, beranda `/`), dan alamat lama berakhiran `.html` dialihkan ke alamat tanpa `.html`?
+- Ada kode yang tampil sebagai teks: tag tidak tertutup, `&nbsp;` atau `&amp;` mentah, komentar HTML, atau teks penanda seperti "Lorem ipsum"?
 - Ada file gagal dimuat (404), link mati, atau error di console?
 - Favicon ada? HTTPS aktif?
 - Ada video atau embed berat yang dimuat otomatis di atas halaman?
 
 ## 10. SEO dasar
-- Tiap halaman punya `<title>` unik dan meta description yang menjelaskan layanan + lokasi kalau relevan?
+- Tiap halaman punya `<title>` unik berisi nama halaman lalu nama brand, bukan "Document", "Untitled", atau nama file? Meta description menjelaskan layanan + lokasi kalau relevan?
 - Satu `<h1>` per halaman, struktur heading berurutan?
 - Gambar punya atribut alt yang deskriptif?
 - Ada Open Graph (judul, deskripsi, gambar) supaya pratinjau rapi saat dibagikan di WhatsApp dan media sosial?
@@ -69,6 +71,8 @@ Pakai pertanyaan ini sebagai alat bantu, bukan formulir. Tidak semua pertanyaan 
 ## 11. Kepercayaan dan kontak
 - Ada testimoni, logo klien, atau jumlah proyek yang bisa dibuktikan?
 - Kontak mudah ditemukan dari halaman mana pun?
+- Web terbuka lewat domain sendiri, bukan alamat sementara (`pages.dev`, `netlify.app`, atau IP server)?
+- Email di halaman kontak memakai nama domain kalau hosting menyediakannya, bukan email gratisan yang terlihat dibuat seadanya?
 - Ada syarat dan ketentuan order (revisi, refund, hak cipta)?
 - Link media sosial aktif dan akunnya masih diperbarui?
 - Ada foto atau cerita singkat tentang orang di balik studio?

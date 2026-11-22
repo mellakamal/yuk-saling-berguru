@@ -18,6 +18,7 @@ Aturan:
 - Kerjakan hanya tahap ini. Jangan mengerjakan tahap berikutnya.
 - Kalau ada pilihan atau ada yang kurang jelas, tanya aku dulu dengan pilihan yang sederhana.
 - Kalau butuh login, akun, atau kunci rahasia, berhenti dan jelaskan apa yang harus aku lakukan sendiri. Jangan minta aku menempelkan password atau kunci di chat.
+- Ikuti references/tampil-profesional.md dari skill bangun-website-code.
 - Setelah selesai, tunjukkan pratinjau yang bisa aku buka.
 - Sebelum commit, perbarui README.md, CLAUDE.md, dan Catatan perubahan di BLUEPRINT.md sesuai perubahan di tahap ini. Lalu simpan progres dengan commit berpesan jelas.
 

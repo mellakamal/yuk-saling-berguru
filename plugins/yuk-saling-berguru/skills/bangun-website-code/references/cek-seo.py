@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Cek SEO dasar untuk web statis. Pakai: python3 -I references/cek-seo.py FOLDER_WEB
+"""Cek SEO dasar dan tampil profesional untuk web statis.
+Pakai: python3 -I references/cek-seo.py FOLDER_WEB
 Hanya memakai pustaka bawaan Python. Kode keluar 1 kalau ada masalah."""
 import os, re, sys, html
 from collections import Counter
@@ -8,6 +9,9 @@ root = sys.argv[1] if len(sys.argv) > 1 else "."
 SKIP = {"node_modules", ".git", "dist", "build", ".astro"}
 TITLE = (30, 65)
 DESC = (130, 165)
+IMG_MAX_KB = 300
+IMG_EXT = (".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif")
+BAD_TITLES = {"", "document", "untitled", "index", "home"}
 
 pages = []
 for d, dirs, files in os.walk(root):
@@ -39,6 +43,8 @@ for p, (h, t, d, is404) in data.items():
     rel = os.path.relpath(p, root)
     noindex = bool(re.search(r'name="robots"[^>]+noindex', h))
     errs = []
+    if t.lower() in BAD_TITLES or t.lower().endswith(".html"):
+        errs.append("judul bawaan atau nama file")
     if noindex and not is404:
         errs.append("noindex di halaman utama")
     if not is404:
@@ -62,16 +68,49 @@ for p, (h, t, d, is404) in data.items():
         if not re.search(r'\balt="', img):
             errs.append("gambar tanpa alt")
             break
+    for img in re.findall(r"<img\b[^>]*>", h):
+        if not (re.search(r'\bwidth="', img) and re.search(r'\bheight="', img)):
+            errs.append("gambar tanpa width dan height")
+            break
+    if re.search(r"&amp;(nbsp|amp|lt|gt|quot|#\d+);|&lt;/?[a-zA-Z!]", h):
+        errs.append("kode tampil sebagai teks")
+    for l in re.findall(r'href="([^"#?]+)', h):
+        if not re.match(r"(https?:|mailto:|tel:|//|data:)", l) and l.endswith(".html"):
+            errs.append("tautan memakai .html: " + l)
     for l in re.findall(r'(?:href|src)="([^"#?]+)', h):
         if re.match(r"(https?:|mailto:|tel:|//|data:)", l):
             continue
         target = os.path.normpath(os.path.join(root, l.lstrip("/")) if l.startswith("/")
                                   else os.path.join(os.path.dirname(p), l))
-        if not (os.path.exists(target) or os.path.exists(os.path.join(target, "index.html"))):
+        if not (os.path.exists(target) or os.path.exists(target + ".html")
+                or os.path.exists(os.path.join(target, "index.html"))):
             errs.append("tautan rusak: " + l)
     rows.append((rel, len(t), len(d), "OK" if not errs else "; ".join(errs)))
     problems += ["%s: %s" % (rel, e) for e in errs]
 
+def block(h, tag):
+    m = re.search(r"<%s\b.*?</%s>" % (tag, tag), h, re.S)
+    if not m:
+        return None
+    x = re.sub(r'\s*aria-current="[^"]*"', "", m.group(0))
+    return re.sub(r"\s+", " ", x).replace(" >", ">")
+
+if len(data) > 3:
+    for tag in ("header", "nav", "footer"):
+        found = {block(h, tag) for (h, t, d, is404) in data.values() if not is404}
+        if len(found) > 1:
+            problems.append("isi <%s> berbeda antarhalaman" % tag)
+
+for d, dirs, files in os.walk(root):
+    dirs[:] = [x for x in dirs if x not in SKIP]
+    for f in files:
+        fp = os.path.join(d, f)
+        if f.lower().endswith(IMG_EXT) and os.path.getsize(fp) > IMG_MAX_KB * 1024:
+            problems.append("gambar lebih dari %d KB: %s (%d KB)" % (
+                IMG_MAX_KB, os.path.relpath(fp, root), os.path.getsize(fp) // 1024))
+
+if not os.path.exists(os.path.join(root, "404.html")):
+    problems.append("404.html tidak ada")
 for name in ("sitemap.xml", "robots.txt"):
     if not os.path.exists(os.path.join(root, name)):
         problems.append(name + " tidak ada")

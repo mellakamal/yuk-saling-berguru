@@ -12,7 +12,7 @@ Fokus skill ini hanya brand kreatif yang menjual karya, komisi, produk, atau jas
 Pakai juga `tulisan-tanpa-gaya-ai` untuk semua teks berbahasa Indonesia yang dibaca pengguna. Teks publik di web mengikuti Bahasa publik brand (biasanya Inggris untuk pasar global, Indonesia untuk pasar lokal).
 
 ## Cek versi panduan
-Versi panduan ini: 0.6.8. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+Versi panduan ini: 0.7.0. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
 
 "Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
 
@@ -89,11 +89,11 @@ Halaman standar: Beranda atau Portofolio (9 sampai 12 karya pilihan), Price shee
 2. Kalau pengguna minta "web dinamis", bedah dulu maksudnya dengan tabel Arti web dinamis. Kebanyakan cukup tingkat 1 atau 2.
 3. Tawarkan tiga pilihan tempat tayang dari bagian Pilihan tempat tayang di `references/hosting.md` dalam satu tabel singkat: Cloudflare Pages, Rumahweb, dan VPS Hostinger. Jelaskan untung rugi tiap pilihan dengan bahasa sehari-hari. Pengguna yang memutuskan. Boleh dijawab nanti saat website siap tayang. Penyedia lain hanya dibahas kalau pengguna menanyakannya.
 4. Jangan menulis Cloudflare atau penyedia lain di blueprint kalau pengguna belum memilih. Jangan menawarkan WordPress.
-5. Kalau pengguna belum yakin, tulis "belum ditentukan, condong ke [rekomendasi]" di bagian 8 blueprint. Ini tidak menghambat Tahap 4, karena web dibangun sebagai HTML biasa di laptop.
+5. Kalau pengguna belum bisa memutuskan, tulis "belum ditentukan" di bagian 8 blueprint dan tanyakan lagi di awal Tahap 7. Ini tidak menghambat Tahap 4, karena web dibangun sebagai HTML biasa di laptop.
 
 Jelaskan pilihan itu dengan analogi, tanpa istilah yang tidak perlu.
 
-Tunjukkan blueprint sebagai ringkasan pendek: daftar halaman, tombol utama dan jalur order, warna dan huruf, tingkat web dan hosting yang dipilih, dan daftar yang masih "belum ada". Dalam satu daftar bernomor, tanyakan hanya yang perlu sebelum membangun, misalnya harga mulai kalau belum ada, usulan kata kunci untuk disetujui, dan pertanyaan pilihan teknologi yang belum terjawab. Domain dan rencana web lain boleh dijawab belum. Setelah pengguna setuju, langsung lanjut ke Tahap 4. Kalau pengguna bilang "lanjut" atau "oke" tanpa menjawab pertanyaan itu, jangan bertanya ulang: tulis yang belum dijawab sebagai "belum ada" atau "belum ditentukan" (untuk hosting: "belum ditentukan, condong ke [rekomendasi]"), tandai kata kunci sebagai usulan yang menunggu persetujuan, lalu lanjut ke Tahap 4 dan sebutkan dalam satu kalimat apa saja yang masih terbuka.
+Tunjukkan blueprint sebagai ringkasan pendek: daftar halaman, tombol utama dan jalur order, warna dan huruf, tingkat web dan hosting yang dipilih, dan daftar yang masih "belum ada". Dalam satu daftar bernomor, tanyakan hanya yang perlu sebelum membangun, misalnya harga mulai kalau belum ada, usulan kata kunci untuk disetujui, dan pertanyaan pilihan teknologi yang belum terjawab. Domain dan rencana web lain boleh dijawab belum. Setelah pengguna setuju, langsung lanjut ke Tahap 4. Kalau pengguna bilang "lanjut" atau "oke" tanpa menjawab pertanyaan itu, jangan bertanya ulang: tulis yang belum dijawab sebagai "belum ada" atau "belum ditentukan" (untuk hosting: "belum ditentukan"), tandai kata kunci sebagai usulan yang menunggu persetujuan, lalu lanjut ke Tahap 4 dan sebutkan dalam satu kalimat apa saja yang masih terbuka.
 
 ### Tahap 4: Blok salin, jembatan ke Claude Code
 Perpindahan dari chat ke Claude Code adalah bagian yang paling sering macet, terutama saat mengunduh file dan memindahkannya dari folder Unduhan. Karena itu jalur utamanya tanpa unduh file: Claude Code yang membuat folder dan file-nya sendiri.
