@@ -56,13 +56,15 @@ Urutan keleluasaan Claude Code untuk web seperti ini: VPS (paling leluasa, tapi 
 
 **Selalu tampilkan tiga pilihan** dalam satu tabel dengan untung rugi yang seimbang: Cloudflare, Rumahweb (paket yang menyediakan SSH), dan VPS Hostinger. Isinya dari tabel Pilihan tempat tayang di `hosting.md`. Jangan ada pilihan bawaan. Label "(Recommended)" hanya diberikan kalau alasannya berasal dari jawaban artist di daftar pertanyaan, dan alasan itu ditulis di deskripsi pilihan itu, misalnya "Kamu butuh email hello@namabrand.com dan lebih nyaman bayar rupiah". Kalau jawaban artist tidak mengarah ke satu pilihan, tampilkan ketiganya tanpa label.
 
+Saat menulis untung rugi, ingat bahwa Claude Code yang mengerjakan bagian teknis, bukan artist. Pilihan yang rumit secara teknis tetap boleh dipilih kalau hasilnya lebih baik. Yang wajib disampaikan jujur: apa yang dikerjakan Claude, apa yang tetap jadi tanggungan artist (biaya, login, persetujuan, dan siapa yang merawat kalau tidak lagi memakai Claude Code), dan risikonya.
+
 Petunjuk membaca jawaban artist. Ini hanya untuk menentukan label dan alasannya, bukan urutan bawaan:
 
 | Jawaban artist | Pilihan yang cocok | Alasan yang ditulis di deskripsi |
 |---|---|---|
 | Sudah punya VPS atau hosting dengan SSH dan mau mengurusnya | Yang sudah dimiliki | Sudah dibayar, dan Claude Code bisa masuk lewat SSH. Ikuti bagian VPS dan SSH di `hosting.md` |
 | Butuh panel admin sendiri (tingkat 2 dengan CMS berbasis Git) | Cloudflare | CMS berbasis Git butuh penayangan langsung dari GitHub. Kotak email domain diurus di layanan email terpisah |
-| Butuh kotak email domain, bayar rupiah, atau CS berbahasa Indonesia | Rumahweb, paket yang menyediakan SSH | Email domain, rupiah, dan CS lokal dalam satu tempat, dan Claude Code tetap bisa masuk lewat SSH |
+| Butuh kotak email domain, bayar rupiah, atau CS berbahasa Indonesia | Rumahweb, paket yang menyediakan SSH | Email domain, rupiah, dan CS lokal dalam satu tempat, dan Claude Code tetap bisa masuk lewat SSH. Domain dipasang di belakang proxy Cloudflare milik artist supaya IP server bersama tidak terlihat |
 | Beberapa web untuk satu brand, atau fitur yang butuh server sendiri, dan mau merawat server | VPS Hostinger | Satu server untuk beberapa web milik brand itu. Pemilik merawat keamanan, pembaruan, dan cadangan |
 | Web milik brand yang berbeda | Setiap web memakai akun sendiri | Lihat bagian beberapa web di `hosting.md` |
 

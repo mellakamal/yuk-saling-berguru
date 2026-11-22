@@ -14,8 +14,8 @@ Untuk peserta Yuk Saling Berguru, selalu tawarkan tiga pilihan ini dalam satu ta
 | Pilihan | Cocok untuk | Untungnya | Yang perlu diterima |
 |---|---|---|---|
 | **Cloudflare Pages** | Web HTML biasa seperti hasil kelas | Gratis, HTTPS otomatis, alamat `nama.pages.dev` langsung jadi, domain sendiri bisa menyusul. Claude Code bisa mengurus dari awal sampai tayang | Butuh akun GitHub dan akun Cloudflare. Belum termasuk email dengan nama domain |
-| **Rumahweb** | Artist yang butuh email dengan nama domain sendiri, atau lebih nyaman dengan penyedia lokal | Bayar dalam rupiah, dukungan berbahasa Indonesia, domain dan email dalam satu tempat | Berbayar. Pilih paket yang menyediakan SSH supaya Claude Code bisa ikut mengurus dan memperbaiki. Daftar paketnya ada di bagian Paket yang menyediakan SSH di `pilihan-teknologi.md` |
-| **VPS Hostinger** | Artist yang ingin satu server untuk beberapa web milik brand yang sama, atau berencana punya fitur yang butuh server sendiri | Akses penuh lewat SSH, jadi Claude Code bisa mengurus server dan web dari awal sampai tayang. Satu server bisa menampung beberapa web milik brand yang sama | Berbayar. Pemilik bertanggung jawab atas keamanan, pembaruan, dan cadangan server. Saat dipilih, jalankan bagian Khusus VPS di `keamanan.md` sebelum web tayang |
+| **Rumahweb** | Artist yang butuh email dengan nama domain sendiri, atau lebih nyaman dengan penyedia lokal | Bayar dalam rupiah, dukungan berbahasa Indonesia, domain dan email dalam satu tempat | Berbayar. Pilih paket yang menyediakan SSH supaya Claude Code bisa ikut mengurus dan memperbaiki. Daftar paketnya ada di bagian Paket yang menyediakan SSH di `pilihan-teknologi.md`. Shared hosting menaruh banyak pelanggan di satu server dengan IP yang sama, jadi Claude Code memasang domain di belakang proxy Cloudflare milik artist sendiri supaya IP server tidak terlihat |
+| **VPS Hostinger** | Artist yang ingin satu server untuk beberapa web milik brand yang sama, atau berencana punya fitur yang butuh server sendiri | Akses penuh lewat SSH, jadi Claude Code bisa mengurus server dan web dari awal sampai tayang. Satu server bisa menampung beberapa web milik brand yang sama | Berbayar per bulan. Claude Code yang memasang dan merawat server setelah artist menyetujui setiap paket kerja, tapi artist yang menanggung biaya dan keputusan. Kalau tidak lagi memakai Claude Code, server perlu dirawat orang lain. Saat dipilih, jalankan bagian Khusus VPS di `keamanan.md` sebelum web tayang |
 
 Penyedia lain di tabel Urutan pilihan di bawah hanya dibahas kalau artist menanyakannya atau sudah punya hosting sendiri. Kalau artist memilih VPS, ikuti bagian Khusus VPS di `keamanan.md`.
 
@@ -37,7 +37,8 @@ Yang ditolak untuk web yang menerima order:
 - **GitHub Pages.** GitHub menyatakan Pages tidak dimaksudkan sebagai hosting gratis untuk usaha online. Boleh untuk portofolio pribadi tanpa order.
 - **Pembuat web tertutup** (Wix, Framer, Squarespace, dan sejenisnya) sebagai tempat web sendiri. Berkas tidak bisa dibawa pindah.
 - **WordPress**, termasuk pemasangan sekali klik di shared hosting. Tidak ditawarkan di skill ini, tetapi dibantu kalau artist tetap memilihnya. Alasan dan caranya ada di `pilihan-teknologi.md`.
-- **VPS yang dibeli baru khusus untuk satu web portofolio** tidak disarankan kalau artist hanya butuh satu web sederhana, karena pemilik harus mengurus pembaruan, keamanan, dan cadangan server. Kalau artist memilih VPS Hostinger dari tiga pilihan di atas setelah paham konsekuensinya, hormati pilihannya dan jalankan bagian Khusus VPS di `keamanan.md`.
+
+VPS untuk satu web portofolio bukan pilihan bawaan, tapi boleh dipilih. Sampaikan jujur: Claude Code yang memasang dan merawat server (pembaruan, keamanan, cadangan) setelah artist menyetujui setiap paket kerja. Artist tetap menanggung biaya bulanan, dan kalau suatu saat tidak lagi memakai Claude Code, server perlu dirawat orang lain. Kalau dipilih, jalankan bagian Khusus VPS di `keamanan.md`.
 
 Carrd sebagai web pertama tetap mengikuti jalur Brand Hub dan tidak dibahas di sini.
 

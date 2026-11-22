@@ -9,7 +9,8 @@ root = sys.argv[1] if len(sys.argv) > 1 else "."
 SKIP = {"node_modules", ".git", "dist", "build", ".astro"}
 TITLE = (30, 65)
 DESC = (130, 165)
-IMG_MAX_KB = 300
+IMG_NOTE_KB = 300
+IMG_MAX_KB = 500
 IMG_EXT = (".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif")
 BAD_TITLES = {"", "document", "untitled", "index", "home"}
 
@@ -20,7 +21,7 @@ for d, dirs, files in os.walk(root):
         if f.endswith(".html"):
             pages.append(os.path.join(d, f))
 pages.sort()
-problems, rows = [], []
+problems, rows, notes = [], [], []
 titles, descs = Counter(), Counter()
 data = {}
 
@@ -105,9 +106,13 @@ for d, dirs, files in os.walk(root):
     dirs[:] = [x for x in dirs if x not in SKIP]
     for f in files:
         fp = os.path.join(d, f)
-        if f.lower().endswith(IMG_EXT) and os.path.getsize(fp) > IMG_MAX_KB * 1024:
-            problems.append("gambar lebih dari %d KB: %s (%d KB)" % (
-                IMG_MAX_KB, os.path.relpath(fp, root), os.path.getsize(fp) // 1024))
+        if not f.lower().endswith(IMG_EXT):
+            continue
+        kb = os.path.getsize(fp) // 1024
+        if kb > IMG_MAX_KB:
+            problems.append("gambar lebih dari %d KB: %s (%d KB)" % (IMG_MAX_KB, os.path.relpath(fp, root), kb))
+        elif kb > IMG_NOTE_KB:
+            notes.append("gambar %d KB, pastikan ini gambar utama atau karya unggulan: %s" % (kb, os.path.relpath(fp, root)))
 
 if not os.path.exists(os.path.join(root, "404.html")):
     problems.append("404.html tidak ada")
@@ -136,6 +141,10 @@ if os.path.exists(sm):
 print("%-28s %6s %6s  %s" % ("Halaman", "Judul", "Desk.", "Hasil"))
 for r in rows:
     print("%-28s %6d %6d  %s" % r)
+if notes:
+    print("\nCATATAN (tidak menggagalkan):")
+    for x in notes:
+        print("- " + x)
 print("\nLOLOS" if not problems else "\nMASALAH (%d):" % len(problems))
 for x in problems:
     print("- " + x)

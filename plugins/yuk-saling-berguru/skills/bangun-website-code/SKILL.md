@@ -142,9 +142,10 @@ Web besar boleh memecah Tahap 3 dan 4 per halaman atau per fitur. Tetap satu tah
 Berlaku saat peserta membuka Claude Code di folder webnya dengan keluhan apa pun, misalnya "webku kok begini", "tampilannya aneh", atau "tolong cek webku", termasuk web yang tidak dibangun dengan skill ini.
 1. Baca `BLUEPRINT.md` dan `README.md` kalau ada. Kalau belum ada, ikuti Mulai atau lanjut nomor 2.
 2. Jalankan semua butir di `references/tampil-profesional.md`, termasuk `references/cek-seo.py` pada folder yang tayang.
-3. Perbaiki sendiri yang gagal. Keputusan brand (warna, teks, logo) dan pembelian domain ditanyakan dulu.
+3. Perbaiki sendiri yang gagal, termasuk yang rumit, karena peserta mengandalkan Claude untuk bagian teknis. Keputusan brand (warna, teks, logo) dan pembelian domain ditanyakan dulu. Kalau web memakai Next.js, Astro, atau alat build lain, ikuti bagian Web dengan alat build di `references/tampil-profesional.md`.
 4. Laporkan dalam daftar singkat dengan dua bagian: yang sudah diperbaiki, dan yang butuh keputusan atau tindakan peserta.
-5. Perbarui tiga file pegangan dan commit.
+5. Tunjukkan hasilnya di pratinjau. Web yang sudah tayang baru diperbarui setelah peserta setuju.
+6. Perbarui tiga file pegangan dan commit.
 
 ## Kalau ada error
 Jelaskan dalam satu atau dua kalimat apa yang terjadi, lalu perbaiki sendiri tanpa menyuruh artist mengedit kode. Kalau error yang sama muncul dua kali, jelaskan penyebabnya dulu dan pertimbangkan jalan yang lebih sederhana. Catat perbaikannya di Catatan perubahan.

@@ -99,15 +99,15 @@ Aturannya:
 
 Ringkasannya di sini. Detail, kriteria, dan aturan Tahap 7 ada di references/hosting.md pada skill bangun-website-code atau bangun-website. Syarat dan paket penyedia sering berubah, jadi cek ulang sebelum menyarankan, dan jangan menyebut harga dari ingatan.
 
-Aturan memilih: web harus bisa dipindah, bisa dikerjakan Claude Code, dan syaratnya mengizinkan web yang menerima order.
+Aturan memilih: web harus bisa diakses Claude Code supaya artist bisa dibantu kalau ada masalah, bisa dipindah, dan syaratnya mengizinkan web yang menerima order. Tidak ada pilihan bawaan. Tiga pilihan selalu ditampilkan dengan untung rugi yang jujur, dan Claude Code yang mengerjakan bagian teknisnya:
 
-| Urutan | Pilihan | Catatan |
-|---|---|---|
-| 0 | VPS atau hosting dengan SSH yang sudah dimiliki artist | Akses Claude paling leluasa lewat kunci SSH dan pengguna deploy tanpa hak root. Artist tetap mengurus pembaruan, firewall, dan cadangan |
-| 1 | Cloudflare, paket gratis | Default untuk web statis yang dikerjakan Claude Code. Video portofolio disematkan dari YouTube atau Vimeo, karena paket gratis tidak mendukung berkas besar |
-| 2 | Netlify, paket gratis | Cadangan. Situs berhenti sementara kalau kredit bulanan habis |
-| 3 | Shared hosting berbayar | Untuk artist yang butuh email dengan nama domain, ingin bayar dalam rupiah, atau butuh dukungan lokal. Unggah manual lewat File Manager |
-| Ditolak | Vercel Hobby, GitHub Pages, pembuat web tertutup, VPS baru khusus satu web | Vercel Hobby hanya nonkomersial, GitHub Pages tidak untuk usaha online, pembuat web tertutup sulit dibawa pindah, dan VPS baru butuh perawatan yang berlebihan untuk satu portofolio |
+| Pilihan | Catatan |
+|---|---|
+| Cloudflare, paket gratis | Claude Code menayangkan setelah artist login. Video portofolio disematkan dari YouTube atau Vimeo. Belum termasuk kotak email domain |
+| Rumahweb, paket dengan SSH | Email domain, bayar rupiah, CS lokal. Claude Code masuk lewat SSH, dan domain dipasang di belakang proxy Cloudflare milik artist |
+| VPS Hostinger | Claude Code memasang dan merawat server setelah artist setuju. Artist menanggung biaya bulanan, dan kalau tidak lagi memakai Claude Code, server perlu dirawat orang lain |
+
+Hosting atau VPS yang sudah dimiliki artist tetap bisa dipakai kalau Claude Code bisa masuk lewat SSH. Shared hosting tanpa SSH hanya pilihan terakhir, karena Claude Code tidak bisa memperbaiki web langsung di sana. Yang tidak dipakai untuk web yang menerima order: Vercel Hobby (hanya nonkomersial), GitHub Pages (tidak untuk usaha online), dan pembuat web tertutup (sulit dibawa pindah).
 
 Hal yang perlu disampaikan ke artist:
 - Kalau studio berencana punya beberapa web untuk satu brand, hosting boleh dikelola sekalian (satu akun atau satu server). Kalau web-web itu milik brand yang berbeda, setiap web memakai akun hosting, akun Cloudflare, dan email sendiri. Rinciannya di bagian beberapa web di referensi hosting skill bangun-website.

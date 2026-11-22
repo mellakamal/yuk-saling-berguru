@@ -2,6 +2,10 @@
 
 Daftar hal yang membuat web terlihat amatir kalau terlewat. Claude Code membereskannya sendiri tanpa menunggu artist meminta, karena artist biasanya tidak tahu hal ini perlu dicek. Yang ditanyakan ke artist hanya keputusan brand (warna, teks, logo) dan pembelian domain.
 
+Artist tidak diharapkan mengerjakan bagian teknis sendiri. Claude Code yang mengerjakannya, termasuk yang rumit, dan artist cukup login, membayar, dan memutuskan. Pekerjaan yang sulit tapi membuat web lebih baik tetap dikerjakan, asal untung ruginya disampaikan jujur.
+
+Perbaikan ditunjukkan di pratinjau dulu. Web yang sudah tayang baru diperbarui setelah artist melihat dan setuju, karena web yang sedang menerima order tidak boleh berubah tanpa sepengetahuan pemiliknya.
+
 Sebagian butir dicek otomatis oleh `references/cek-seo.py`. Jalankan pada folder yang tayang: `python3 -I <folder skill>/references/cek-seo.py site`.
 
 ## a. Alamat tanpa .html
@@ -9,7 +13,7 @@ Sebagian butir dicek otomatis oleh `references/cek-seo.py`. Jalankan pada folder
 
 **Benerin:**
 - Ganti semua link di menu, tombol, footer, sitemap, dan canonical ke alamat tanpa `.html`. Nama file tetap `nama-halaman.html`.
-- Pratinjau di laptop memakai `python3 -I <folder skill>/references/pratinjau.py site`, lalu buka alamat yang muncul, supaya link tanpa `.html` bekerja seperti setelah tayang. Kalau Python tidak ada dan Node terpasang, pakai `npx serve site`. Kalau keduanya tidak ada, file bisa dibuka langsung, tapi sampaikan ke artist bahwa pindah halaman lewat menu baru berfungsi setelah tayang.
+- Pratinjau di laptop dijalankan Claude Code dengan `python3 -I <folder skill>/references/pratinjau.py site`, supaya link tanpa `.html` bekerja seperti setelah tayang. Artist cukup membuka alamat yang diberikan. Kalau Python belum ada, Claude menawarkan memasangnya dan memasangnya setelah artist setuju. Kalau Node sudah ada, `npx serve site` juga bisa dipakai. Kalau keduanya tidak bisa dipasang, file tetap bisa dibuka langsung, dan sampaikan jujur bahwa pindah halaman lewat menu baru berfungsi setelah tayang.
 - **Apache atau LiteSpeed** (Rumahweb, shared hosting Hostinger, VPS dengan Apache): buat `.htaccess` di folder yang tayang.
 
 ```
@@ -82,6 +86,13 @@ error_page 404 /404.html;
 **Benerin:** perbaiki CSS sampai lolos di kedua lebar, lalu cek lagi di lebar tablet sekitar 768px.
 
 ## j. Gambar ringan dan tidak membuat tata letak loncat
-**Cek:** setiap gambar di bawah 300 KB, karya memakai format WebP, dan setiap tag `img` punya `width` dan `height`. `cek-seo.py` melaporkan gambar yang terlalu besar dan tag `img` tanpa ukuran.
+**Cek:** gambar umum di bawah 300 KB. Gambar utama di layar pertama dan karya unggulan boleh sampai sekitar 500 KB kalau di bawah 300 KB detail karyanya terlihat pecah. Karya memakai format WebP, dan setiap tag `img` punya `width` dan `height`. `cek-seo.py` mencatat gambar di atas 300 KB dan menandai gambar di atas 500 KB sebagai masalah.
 
-**Benerin:** perkecil gambar ke ukuran tampil, ubah ke WebP, dan isi `width` dan `height` sesuai ukuran aslinya. File resolusi penuh tetap di `bahan/` atau Drive artist, tidak ikut tayang. Gambar pratinjau link di butir d boleh tetap JPG atau PNG asal di bawah 300 KB.
+**Benerin:** perkecil gambar ke ukuran tampil, ubah ke WebP, dan isi `width` dan `height` sesuai ukuran aslinya. Untuk karya, bandingkan hasil kompres dengan aslinya bersama artist. Kualitas karya lebih penting daripada angka, jadi sampaikan jujur kalau ada gambar yang memang lebih besar dan alasannya. File resolusi penuh tetap di `bahan/` atau Drive artist, tidak ikut tayang. Gambar pratinjau link di butir d boleh tetap JPG atau PNG asal di bawah 300 KB.
+
+## Web dengan alat build
+Berlaku untuk web yang dibangun dengan Next.js, Astro, atau alat sejenis, termasuk web yang tidak dibuat dengan skill ini.
+- Jalankan build dulu, lalu jalankan `cek-seo.py` pada folder hasil build (misalnya `out`, `dist`, atau folder yang ditayangkan hosting). Kalau web memakai server sendiri sehingga tidak ada folder hasil build statis, cek halaman yang sudah dijalankan di lokal dengan membaca HTML-nya lewat browser atau `curl`.
+- Alamat tanpa `.html`, judul, dan gambar pratinjau diatur lewat pengaturan alat itu (routing dan metadata), bukan `.htaccess`.
+- Pastikan isi penting (karya, harga, ToS, FAQ, menu, dan footer) sudah ada di HTML hasil build atau HTML yang dikirim server, bukan baru digambar JavaScript setelah halaman dimuat. Kalau belum, sampaikan jujur dampaknya ke Google dan AI search, lalu tawarkan perbaikannya.
+- Kalau ada peringatan celah keamanan dari alat itu, laporkan ke artist dan jelaskan dampaknya. Jangan upgrade tanpa persetujuan, karena upgrade bisa mengubah tampilan atau merusak build.

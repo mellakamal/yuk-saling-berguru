@@ -54,7 +54,7 @@ Pakai pertanyaan ini sebagai alat bantu, bukan formulir. Tidak semua pertanyaan 
 - Galeri karya nyaman di-scroll, gambar tidak terlalu kecil?
 
 ## 9. Kecepatan dan teknis
-- Ukuran gambar besar (di atas sekitar 300 KB per gambar)? Sudah format WebP/AVIF? Setiap gambar punya `width` dan `height`?
+- Ukuran gambar besar (di atas sekitar 300 KB untuk gambar umum, atau di atas sekitar 500 KB untuk gambar utama dan karya unggulan)? Sudah format WebP/AVIF? Setiap gambar punya `width` dan `height`?
 - Alamat halaman tanpa `.html` (`/nama-halaman`, beranda `/`), dan alamat lama berakhiran `.html` dialihkan ke alamat tanpa `.html`?
 - Ada kode yang tampil sebagai teks: tag tidak tertutup, `&nbsp;` atau `&amp;` mentah, komentar HTML, atau teks penanda seperti "Lorem ipsum"?
 - Ada file gagal dimuat (404), link mati, atau error di console?
