@@ -30,6 +30,19 @@ def meta(h, name, attr="name"):
         re.search(r'<meta[^>]+content="([^"]*)"[^>]+%s="%s"' % (attr, name), h)
     return html.unescape(m.group(1)) if m else None
 
+def url_kotor(u, cek_html=False):
+    """Kembalikan alasan kalau alamat halaman tidak bersih, atau None."""
+    if "#/" in u:
+        return "memakai #/ untuk pindah halaman"
+    if "?" in u:
+        return "memakai parameter"
+    path = re.sub(r"^https?://[^/]+", "", u.split("#")[0])
+    if cek_html and (path.endswith(".html")):
+        return "memakai .html"
+    if re.search(r"[A-Z_ ]|%20", path):
+        return "memakai huruf besar, garis bawah, atau spasi"
+    return None
+
 for p in pages:
     h = open(p, encoding="utf-8").read()
     is404 = os.path.basename(p).lower() == "404.html"
@@ -78,6 +91,22 @@ for p, (h, t, d, is404) in data.items():
     for l in re.findall(r'href="([^"#?]+)', h):
         if not re.match(r"(https?:|mailto:|tel:|//|data:)", l) and l.endswith(".html"):
             errs.append("tautan memakai .html: " + l)
+    for l in re.findall(r'<a\b[^>]*\bhref="([^"]+)"', h):
+        if re.match(r"(https?:|mailto:|tel:|//|data:|#)", l):
+            continue
+        masalah = url_kotor(l)
+        if masalah:
+            errs.append("tautan %s: %s" % (masalah, l))
+    for k in ("canonical", "og:url"):
+        u = meta(h, k, "property") if k == "og:url" else \
+            (re.search(r'<link[^>]+rel="canonical"[^>]+href="([^"]*)"', h) or
+             re.search(r'<link[^>]+href="([^"]*)"[^>]+rel="canonical"', h))
+        if u is not None and not isinstance(u, str):
+            u = u.group(1)
+        if u:
+            masalah = url_kotor(u, cek_html=True)
+            if masalah:
+                errs.append("%s %s: %s" % (k, masalah, u))
     for l in re.findall(r'(?:href|src)="([^"#?]+)', h):
         if re.match(r"(https?:|mailto:|tel:|//|data:)", l):
             continue
@@ -123,6 +152,9 @@ sm = os.path.join(root, "sitemap.xml")
 if os.path.exists(sm):
     locs = re.findall(r"<loc>(.*?)</loc>", open(sm, encoding="utf-8").read())
     for u in locs:
+        masalah = url_kotor(u, cek_html=True)
+        if masalah:
+            problems.append("sitemap %s: %s" % (masalah, u))
         path = re.sub(r"^https?://[^/]+/?", "", u) or "index.html"
         cands = [path, path + ".html", os.path.join(path, "index.html")]
         if not any(os.path.exists(os.path.join(root, c)) for c in cands):

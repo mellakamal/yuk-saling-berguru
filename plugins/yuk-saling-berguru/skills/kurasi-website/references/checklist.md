@@ -13,7 +13,7 @@ Pakai pertanyaan ini sebagai alat bantu, bukan formulir. Tidak semua pertanyaan 
 - Nada bahasa konsisten di semua halaman?
 
 ## 3. Kurasi karya / portofolio
-- Jumlah karya cukup tapi tidak berlebihan (9 sampai 12 karya terbaik untuk web, mengikuti kriteria kurasi karya Brand Hub)?
+- Jumlah karya cukup tapi tidak berlebihan (9 sampai 12 karya terbaik untuk web, mengikuti kriteria kurasi karya Brand Hub)? Untuk web satu halaman atau Carrd dari jalur cepat Brand Hub, 6 sampai 9 karya sudah cukup.
 - Karya terkuat diletakkan paling atas atau paling awal?
 - Ada karya lama atau lemah yang menurunkan kesan keseluruhan?
 - Kategori jelas (misalnya per jenis layanan) dan sesuai dengan yang dijual?
@@ -31,7 +31,7 @@ Pakai pertanyaan ini sebagai alat bantu, bukan formulir. Tidak semua pertanyaan 
 - Harga atau kisaran harga ditampilkan, atau ada alasan jelas kenapa tidak?
 - Paket mudah dibandingkan (tabel atau kartu sejajar)?
 - Yang didapat di tiap paket jelas (jumlah revisi, format file, hak pakai komersial)?
-- Format angka: Rp 1.500.000, bukan 1,5jt atau IDR1500000.
+- Format angka: Rp1.500.000, bukan Rp 1.500.000, 1,5jt, atau IDR1500000.
 
 ## 6. Copywriting dan bahasa
 - Ada typo, campuran bahasa yang tidak sengaja, atau kalimat terlalu panjang?
