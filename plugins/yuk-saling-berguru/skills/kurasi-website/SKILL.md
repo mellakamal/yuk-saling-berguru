@@ -139,6 +139,9 @@ Aturan isi prompt:
 - Tiap butir punya "Selesai kalau" supaya Claude Code tahu kapan berhenti.
 - Butir Penilaian yang menyangkut copy, warna, atau gaya brand ditandai "(tunjukkan dulu sebelum diterapkan)", karena itu keputusan pemilik brand.
 - Kalau nama file belum diketahui (bahan berupa link atau screenshot), tulis bagian halamannya dan minta Claude Code mencari filenya sendiri.
+- Kalau URL web belum bersih (kriteria di `references/checklist.md` area 10), jadikan butir sendiri. Tulis daftar alamat lama dan alamat bersih penggantinya satu per satu, minta semua link internal, canonical, og:url, dan sitemap ikut diganti, dan minta alamat lama dialihkan (301) ke alamat baru supaya link yang sudah dibagikan tidak mati. Cara membuang `.html` mengikuti hosting: di GitHub Pages pakai folder `portofolio/index.html` lalu tautkan ke `/portofolio/`, di Vercel pakai `cleanUrls`, di Netlify pakai Pretty URLs. Selesai kalau: semua link di menu dan sitemap tanpa `.html` atau parameter, dan alamat lama terbuka ke alamat baru.
+
+Semua link yang ditulis di hasil kurasi dan di prompt juga ditulis bersih: alamat utama saja, tanpa `index.html`, parameter pelacak (`utm_`, `fbclid`, `gclid`), parameter cek cache (`?x=123`), atau sisa pencarian. Parameter hanya dipertahankan kalau memang bagian dari fungsi, misalnya `?text=` di link WhatsApp.
 
 Di Claude Code dengan akses folder, simpan juga hasil lengkap ke `KURASI-YYYY-MM-DD.md` di akar folder proyek, supaya kurasi ulang nanti bisa membandingkan skor.
 
