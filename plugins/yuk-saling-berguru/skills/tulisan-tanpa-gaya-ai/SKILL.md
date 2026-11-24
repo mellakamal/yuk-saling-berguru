@@ -50,6 +50,15 @@ Setiap brand perlu suara dan tampilan sendiri. Teks dan desain yang terasa seper
 2. Sebelum menyerahkan teks publik (hook, caption, bio, ToS, FAQ, pengumuman, judul halaman), cek bahwa kalimatnya tidak sama dengan contoh di skill mana pun dari plugin ini. Kalau sama atau hampir sama, tulis ulang.
 3. Teks ditulis dari kata-kata, aturan, dan cerita studio itu sendiri: Profil Brand, jawaban pertanyaan pembeda, caption atau balasan lama, dan bahan dari artist.
 
+## Angka di pesan WhatsApp
+
+WhatsApp otomatis membaca deretan angka bertitik seperti 5.000.000 sebagai nomor telepon, sehingga angkanya diwarnai hijau, terpotong dari "Rp", dan bisa diklik. Angkanya tetap benar, tapi tampilannya berantakan. Untuk teks yang akan dikirim lewat WhatsApp:
+
+- Nominal rupiah dan angka panjang ditulis dalam format kode (diapit satu backtick), misalnya `Rp25.000.000`. Angka tetap utuh, tidak disingkat.
+- Dalam daftar rincian, terapkan ke semua nominal agar tampilannya seragam.
+- Kalau WhatsApp masih menandai angka di dalam format kode, ganti dengan satuan kata (Rp25 juta) di isi pesan, lalu lampirkan PDF atau slide untuk angka persisnya.
+- Aturan ini hanya untuk pesan WhatsApp. Di slide dan dokumen, nominal tetap ditulis utuh tanpa backtick (Rp25.000.000).
+
 ## Ceklis sebelum mengirim
 
 1. Cari —, –, ·, ;, + dan & di dalam kalimat. Harus nol.
@@ -59,3 +68,4 @@ Setiap brand perlu suara dan tampilan sendiri. Teks dan desain yang terasa seper
 5. Hitung huruf tebal. Kurangi kalau lebih dari satu per bagian.
 6. Kalau teksnya untuk slide, cari juga "kamu", "aku", "supaya", dan kata obrolan. Hasilnya harus nol.
 7. Kalau teksnya untuk publik, bandingkan dengan contoh di skill plugin ini. Tidak boleh ada kalimat yang sama.
+8. Kalau teksnya untuk WhatsApp, cek setiap nominal dan angka panjang sudah diapit backtick.
