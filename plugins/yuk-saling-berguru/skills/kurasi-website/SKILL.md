@@ -8,7 +8,7 @@ description: "Gunakan saat artist, studio kreatif, atau pemilik usaha punya webs
 Tugas skill ini: memeriksa website yang sudah ada, menilai tiap area, lalu memberi perbaikan yang bisa langsung dikerjakan. Hasilnya harus siap pakai, bukan teori. Pemilik web harus bisa membaca hasilnya dalam dua menit dan tahu apa yang dikerjakan duluan.
 
 ## Cek versi panduan
-Versi panduan ini: 0.7.0. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+Versi panduan ini: 0.7.1. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
 
 "Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
 
@@ -139,6 +139,9 @@ Aturan isi prompt:
 - Tiap butir punya "Selesai kalau" supaya Claude Code tahu kapan berhenti.
 - Butir Penilaian yang menyangkut copy, warna, atau gaya brand ditandai "(tunjukkan dulu sebelum diterapkan)", karena itu keputusan pemilik brand.
 - Kalau nama file belum diketahui (bahan berupa link atau screenshot), tulis bagian halamannya dan minta Claude Code mencari filenya sendiri.
+- Kalau URL web belum bersih (kriteria di `references/checklist.md` area 10), jadikan butir sendiri. Tulis daftar alamat lama dan alamat bersih penggantinya satu per satu, minta semua link internal, canonical, og:url, dan sitemap ikut diganti, dan minta alamat lama dialihkan permanen ke alamat baru supaya link yang sudah dibagikan tidak mati. Nama file tetap `nama-halaman.html`, cukup link dan pengaturan hosting yang diubah. Sebut cara perbaikannya dengan merujuk `references/tampil-profesional.md` butir a di skill bangun-website-code, yang berisi aturan untuk Apache atau LiteSpeed, Nginx, Cloudflare, dan web yang memakai alat build. Selesai kalau: semua link di menu dan sitemap tanpa `.html` atau parameter, dan `curl -sI` ke alamat lama memberi 301 atau 308 ke alamat baru.
+
+Semua link yang ditulis di hasil kurasi dan di prompt juga ditulis bersih: alamat utama saja, tanpa `index.html`, parameter pelacak (`utm_`, `fbclid`, `gclid`), parameter cek cache (`?x=123`), atau sisa pencarian. Parameter hanya dipertahankan kalau memang bagian dari fungsi, misalnya `?text=` di link WhatsApp.
 
 Di Claude Code dengan akses folder, simpan juga hasil lengkap ke `KURASI-YYYY-MM-DD.md` di akar folder proyek, supaya kurasi ulang nanti bisa membandingkan skor.
 
