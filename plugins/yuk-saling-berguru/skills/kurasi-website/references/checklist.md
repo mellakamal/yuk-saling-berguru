@@ -55,7 +55,6 @@ Pakai pertanyaan ini sebagai alat bantu, bukan formulir. Tidak semua pertanyaan 
 
 ## 9. Kecepatan dan teknis
 - Ukuran gambar besar (di atas sekitar 300 KB untuk gambar umum, atau di atas sekitar 500 KB untuk gambar utama dan karya unggulan)? Sudah format WebP/AVIF? Setiap gambar punya `width` dan `height`?
-- Alamat halaman tanpa `.html` (`/nama-halaman`, beranda `/`), dan alamat lama berakhiran `.html` dialihkan ke alamat tanpa `.html`?
 - Ada kode yang tampil sebagai teks: tag tidak tertutup, `&nbsp;` atau `&amp;` mentah, komentar HTML, atau teks penanda seperti "Lorem ipsum"?
 - Ada file gagal dimuat (404), link mati, atau error di console?
 - Favicon ada? HTTPS aktif?
@@ -68,13 +67,13 @@ Pakai pertanyaan ini sebagai alat bantu, bukan formulir. Tidak semua pertanyaan 
 - Ada Open Graph (judul, deskripsi, gambar) supaya pratinjau rapi saat dibagikan di WhatsApp dan media sosial?
 - Ada sitemap.xml dan robots.txt?
 - URL bersih? Cek alamat semua halaman utama, link menu, canonical, og:url, dan isi sitemap. Alamat dianggap bersih kalau:
-  - Tanpa akhiran `.html` dan tanpa `index.html` (`/portofolio`, bukan `/portofolio.html` atau `/portofolio/index.html`).
+  - Tanpa akhiran `.html` dan tanpa `index.html` (`/portofolio`, bukan `/portofolio.html` atau `/portofolio/index.html`), beranda cukup `/`. Alamat lama berakhiran `.html` dialihkan ke alamat tanpa `.html`.
   - Tanpa tanda pagar untuk pindah halaman (`/#/harga`). Tanda pagar hanya boleh untuk loncat ke bagian di web satu halaman (`/#harga`).
   - Tanpa parameter (`?id=3`, `?page=harga`, `?utm_source=...`, `?fbclid=...`) di link menu, canonical, og:url, dan sitemap.
   - Huruf kecil semua, kata dipisah tanda hubung, tanpa spasi (`%20`), garis bawah, atau angka acak (`/harga-commission`, bukan `/Harga_Commission` atau `/page-2`).
-  - Satu versi alamat saja: https, pilih pakai www atau tanpa www, dan garis miring di akhir dibuat konsisten. Versi lain dialihkan (301) ke versi itu, bukan tampil sebagai halaman kembar.
+  - Satu versi alamat saja: https, pilih pakai www atau tanpa www, dan garis miring di akhir dibuat konsisten. Versi lain dialihkan permanen ke versi itu, bukan tampil sebagai halaman kembar.
   - Link di bio, QR, dan kartu nama langsung ke domain, bukan lewat pemendek link yang menampilkan halaman perantara atau iklan sebelum web terbuka.
-  - Penilaian: web pakai domain sendiri, bukan `namaakun.github.io/nama-repo`, `nama.vercel.app`, atau `nama.netlify.app`.
+  - Cara cek pengalihan untuk link live: `curl -sI` ke alamat lama (versi `.html`, `http`, dan www atau tanpa www). Hasilnya harus 301 atau 308 dengan `location` ke alamat bersih. Domain sendiri dicek di area 11.
 
 ## 11. Kepercayaan dan kontak
 - Ada testimoni, logo klien, atau jumlah proyek yang bisa dibuktikan?
