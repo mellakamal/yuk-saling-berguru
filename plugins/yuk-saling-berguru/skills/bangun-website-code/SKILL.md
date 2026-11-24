@@ -12,7 +12,7 @@ Fokus skill ini hanya brand kreatif yang menjual karya, komisi, produk, atau jas
 Pakai juga `tulisan-tanpa-gaya-ai` untuk teks berbahasa Indonesia yang dibaca artist. Teks publik di web mengikuti Bahasa publik brand (biasanya Inggris untuk pasar global, Indonesia untuk pasar lokal).
 
 ## Cek versi panduan
-Versi panduan ini: 0.7.1. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+Versi panduan ini: 0.7.2. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
 
 "Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
 

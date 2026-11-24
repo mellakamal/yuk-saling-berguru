@@ -8,7 +8,7 @@ description: "Gunakan saat artist, studio kreatif, atau pemilik usaha punya webs
 Tugas skill ini: memeriksa website yang sudah ada, menilai tiap area, lalu memberi perbaikan yang bisa langsung dikerjakan. Hasilnya harus siap pakai, bukan teori. Pemilik web harus bisa membaca hasilnya dalam dua menit dan tahu apa yang dikerjakan duluan.
 
 ## Cek versi panduan
-Versi panduan ini: 0.7.1. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+Versi panduan ini: 0.7.2. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
 
 "Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
 
@@ -152,7 +152,7 @@ Di Claude Code dengan akses folder, simpan juga hasil lengkap ke `KURASI-YYYY-MM
 - Ikuti register pengguna. Kalau ia menulis santai (aku/gue), jawab santai. Kalau baku, jawab baku. Jangan dicampur.
 - Ikuti skill `tulisan-tanpa-gaya-ai` untuk semua teks hasil kurasi dan semua teks pengganti yang diusulkan untuk web. Skill itu juga dipakai sebagai patokan saat menilai area Copywriting.
 - Jangan pakai kata "kalian" di teks pengganti untuk pengunjung web.
-- Angka uang ditulis lengkap: Rp 285.000, bukan 285rb.
+- Angka uang ditulis lengkap tanpa spasi setelah Rp: Rp285.000, bukan Rp 285.000 atau 285rb.
 - Jangan ulang poin yang sama di dua bagian. Kalau sudah ada di tabel skor, daftar perbaikan cukup berisi tindakannya.
 
 ## 6. Kalau pengguna minta langsung dibetulkan

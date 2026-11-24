@@ -9,7 +9,7 @@ Perbaikan ditunjukkan di pratinjau dulu. Web yang sudah tayang baru diperbarui s
 Sebagian butir dicek otomatis oleh `references/cek-seo.py`. Jalankan pada folder yang tayang: `python3 -I <folder skill>/references/cek-seo.py site`.
 
 ## a. Alamat tanpa .html
-**Cek:** semua link antarhalaman ditulis tanpa `.html` (misalnya `/nama-halaman`), dan link ke beranda ditulis `/`. `cek-seo.py` melaporkan link yang masih berakhiran `.html`. Buka satu alamat lama yang berakhiran `.html` di web yang tayang, pastikan dialihkan ke alamat tanpa `.html`.
+**Cek:** semua link antarhalaman ditulis tanpa `.html` (misalnya `/nama-halaman`), dan link ke beranda ditulis `/`. `cek-seo.py` melaporkan link yang masih berakhiran `.html`, memakai parameter (`?id=`, `utm_`), memakai `#/` untuk pindah halaman, atau memakai huruf besar dan garis bawah, termasuk di canonical, og:url, dan sitemap. Buka satu alamat lama yang berakhiran `.html` di web yang tayang, pastikan dialihkan ke alamat tanpa `.html`.
 
 **Benerin:**
 - Ganti semua link di menu, tombol, footer, sitemap, dan canonical ke alamat tanpa `.html`. Nama file tetap `nama-halaman.html`.
