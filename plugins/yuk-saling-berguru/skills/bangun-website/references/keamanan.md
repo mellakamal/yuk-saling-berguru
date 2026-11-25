@@ -32,7 +32,8 @@ Jalankan sebagai daftar periksa di Tahap Tayang, laporkan hasilnya ke artist:
 4. HTTPS aktif, dan alamat `http://` dialihkan ke `https://`.
 5. Skrip dan huruf dari luar hanya dari sumber tepercaya (misalnya Google Fonts, model-viewer dari CDN resminya). Tidak ada skrip pelacak yang tidak diminta artist.
 6. Form dicoba sekali, data masuk ke tempat yang benar, dan spam tertahan.
-7. Halaman yang belum siap tidak ikut tayang.
+7. Halaman yang belum siap tidak ikut tayang. Arsip web publik (Wayback Machine) bisa menyimpan halaman sejak hari pertama, dan salinannya tidak bisa dijamin terhapus, jadi rapikan dulu baru tayang.
+8. Brand berdiri sendiri: email kontak, kode analitik, nama proyek di hosting, dan nama subdomain milik brand ini sendiri, privasi data pemilik domain aktif, dan pengaturan di bagian Kalau punya atau berencana punya beberapa web di `hosting.md` sudah diikuti. Kalau skill kurasi-website terpasang, jalankan cek keterpisahan brand (`references/keterpisahan.md`).
 
 ## Khusus VPS
 Dikerjakan saat artist memilih VPS di Tahap Tayang. Claude Code menyiapkan dan menjalankan perintahnya setelah satu persetujuan per paket kerja. Lengkapi bagian VPS di `hosting.md`.
