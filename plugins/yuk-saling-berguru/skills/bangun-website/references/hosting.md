@@ -79,7 +79,9 @@ Studio sering menambah web baru (web per brand, per proyek, atau per kampanye). 
 
 **Web milik brand yang berbeda** (misalnya beberapa studio, atau brand yang ingin tampil terpisah). Setiap web berdiri sendiri sejak awal:
 - Akun hosting, akun Cloudflare, akun GitHub, dan email sendiri per brand, didaftarkan dengan email brand itu.
-- Jangan menaruhnya di satu VPS atau satu akun. Beberapa web di satu server memakai alamat IP yang sama, dan siapa pun bisa mengecek domain apa saja yang ada di satu IP. Domain yang dikelola dalam satu akun Cloudflare juga mendapat pasangan nameserver yang sama, dan itu terlihat publik.
+- Pilihan paling hemat sekaligus paling terpisah: web statis di hosting gratis (Cloudflare Pages atau Netlify) dengan akun per brand. Alamat IP-nya dipakai bersama ribuan situs lain, jadi tidak mengaitkan brand mana pun, dan biayanya Rp0. VPS hanya perlu kalau web memang butuh server sendiri.
+- Domain yang dikelola dalam satu akun Cloudflare mendapat pasangan nameserver yang sama, dan itu terlihat publik. Akun Cloudflare juga dipisah per brand.
+- Beberapa brand di satu VPS sebaiknya dihindari, karena siapa pun bisa mengecek domain apa saja yang ada di satu alamat IP. Kalau tetap memakai satu VPS untuk menghemat biaya, semua syarat di bagian VPS bersama untuk beberapa brand wajib dipenuhi.
 - Kalau orang yang sama membantu beberapa brand, ia bekerja di akun milik brand yang sedang dikerjakan, bukan memakai akunnya sendiri untuk semua web.
 
 **Berlaku untuk keduanya:**
@@ -87,6 +89,19 @@ Studio sering menambah web baru (web per brand, per proyek, atau per kampanye). 
 - **Jejak teknis yang dipisah per brand:** satu sertifikat SSL per domain (jangan menggabungkan beberapa domain dalam satu sertifikat, karena daftar domain di sertifikat tercatat publik), kode analitik terpisah, perlindungan privasi data pemilik domain dinyalakan di registrar, dan email kontak di web memakai email brand itu sendiri.
 - Satu repo GitHub per web, dengan nama dari brand itu sendiri, bukan pola yang sama untuk semua web. Catat web mana ada di hosting mana di `README.md` tiap proyek (tanpa password dan token).
 - Domain tiap web atas nama pemilik brand.
+
+## VPS bersama untuk beberapa brand
+Berlaku kalau beberapa brand yang perlu berdiri sendiri tetap ditaruh di satu VPS. Semua syarat wajib dipenuhi. Satu saja terlewat sudah cukup untuk mengaitkan semua web di server itu.
+
+1. **Proxy sejak hari pertama.** Setiap domain berada di belakang proxy Cloudflare (ikon awan oranye) sejak catatan DNS pertama dibuat. Layanan histori DNS menyimpan alamat IP yang pernah tercatat. Kalau IP server pernah tayang tanpa proxy, minta IP baru atau pindah ke VPS baru setelah semua proxy aktif.
+2. **Akun Cloudflare per brand,** supaya pasangan nameserver tiap domain berbeda.
+3. **Firewall hanya untuk Cloudflare.** Port 80 dan 443 hanya menerima daftar IP resmi Cloudflare. Akses SSH dibatasi sesuai bagian Khusus VPS di `keamanan.md`.
+4. **Server diam kalau diakses langsung lewat IP.** Blok bawaan di Nginx atau Caddy menutup koneksi tanpa menampilkan sertifikat atau halaman yang menyebut domain mana pun. Pakai sertifikat Cloudflare Origin per domain.
+5. **Email tidak dikirim dari server ini.** Form dan notifikasi lewat layanan email terpisah, karena header email bisa memuat IP server.
+6. **Tidak ada nama yang bocor dari server.** Halaman error, header server, nama folder, dan panel admin tidak menyebut brand lain.
+7. **Cek ulang setiap ada web baru.** Pemilik mengecek IP server di layanan reverse IP dan histori DNS. Hasilnya tidak boleh menampilkan domain brand mana pun. Lalu jalankan cek keterpisahan brand dari skill kurasi-website (`references/keterpisahan.md`).
+
+Sampaikan dengan jujur ke artist: pemisahan di satu VPS bergantung pada pengaturan yang tidak boleh salah sekali pun, dan perlu dirawat terus. Untuk web statis, hosting gratis dengan akun per brand tetap lebih aman dan lebih murah.
 
 ## Netlify
 Paket gratis memakai sistem kredit bulanan, dan bandwidth dihitung sebagai kredit. Sumber pihak ketiga menyebut pemakaian komersial diizinkan di paket gratis, tapi cek syarat resminya sebelum menyarankan. Situs berhenti sementara kalau kredit habis, jadi web yang ramai atau penuh gambar besar bisa terkena.

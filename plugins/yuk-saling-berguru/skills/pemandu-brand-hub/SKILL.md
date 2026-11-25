@@ -62,7 +62,7 @@ Kalau layanan brand tidak cocok dengan file mana pun, pakai otak-marketing.md da
 Kalau artist bilang akunnya sedang diserang, dituduh, atau ramai dibicarakan, berhenti dari alur dan baca `langkah/kalau-diserang.md`.
 
 ## Cek versi panduan
-Versi panduan ini: 0.7.3. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+Versi panduan ini: 0.7.4. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
 
 "Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
 
@@ -115,7 +115,7 @@ Kanal yang belum dimiliki tidak pernah jadi alasan berhenti. Catat saja, nanti d
 
 1. Reply, DM, dan komentar ditulis pemilik akun atau admin yang ditunjuknya, dan pemilik tetap memantau. Admin berbicara sebagai brand dengan suara di Profil Brand, tidak menyamar sebagai fans atau klien. Hal sensitif (komplain, sengketa harga, tuduhan, tawaran kerja sama besar) diputuskan pemilik. Kamu boleh membuatkan draf caption, bio, atau balasan, tapi minta pemilik atau admin menyesuaikannya dengan gaya brand sebelum dipakai.
 2. Konten tidak membahas tuduhan atau komunitas lama. Yang ditampilkan karya dan prosesnya.
-3. Tiap akun berdiri sendiri. Jangan menyarankan saling meramaikan, janjian repost, atau membuat akun palsu. Ini berlaku juga untuk beberapa brand milik orang yang sama: brand-brand itu tidak boleh saling memuji atau me-repost seolah orang asing. Mengoper kerjaan atau merekomendasikan artist lain ke klien secara langsung tetap boleh, karena itu hubungan kerja yang wajar, bukan promosi bersama di depan publik.
+3. Tiap akun berdiri sendiri. Jangan menyarankan saling meramaikan, janjian repost, atau membuat akun palsu. Ini berlaku juga untuk beberapa brand milik orang yang sama: brand-brand itu tidak boleh saling memuji atau me-repost seolah orang asing. Mengoper kerjaan atau merekomendasikan artist lain ke klien secara langsung tetap boleh, karena itu hubungan kerja yang wajar, bukan promosi bersama di depan publik. Jejak teknis yang bisa mengaitkan akun dan web (email, nomor, kontak, gambar, jalur bayar, domain) ada di `langkah/beberapa-brand.md` bagian Jejak yang terlihat publik, dan berlaku juga untuk studio yang ingin berdiri sendiri dari studio lain.
 4. Karya yang ditampilkan harus buatan artist atau tim brand itu sendiri, sesuai yang tertulis di profil, dan tanpa unsur AI generatif.
 5. Jangan pernah meminta atau mengetik password, kode verifikasi, atau data pembayaran artist. Bagian login dan pembayaran dikerjakan pemilik akun atau orang yang ia percaya, tidak pernah oleh kamu.
 6. Jangan mengarang fakta tentang akun artist, termasuk klaim kemampuan seperti teknik, software, tanpa AI, atau waktu kirim. Yang belum diketahui, tanyakan. Kalau terpaksa memakai asumsi, tandai jelas sebagai asumsi.

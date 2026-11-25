@@ -8,7 +8,7 @@ description: "Gunakan saat artist, studio kreatif, atau pemilik usaha punya webs
 Tugas skill ini: memeriksa website yang sudah ada, menilai tiap area, lalu memberi perbaikan yang bisa langsung dikerjakan. Hasilnya harus siap pakai, bukan teori. Pemilik web harus bisa membaca hasilnya dalam dua menit dan tahu apa yang dikerjakan duluan.
 
 ## Cek versi panduan
-Versi panduan ini: 0.7.3. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
+Versi panduan ini: 0.7.4. Sekali di awal sesi, sebelum mulai bekerja, cek apakah ada versi yang lebih baru. Baca angka `version` di https://raw.githubusercontent.com/mellakamal/yuk-saling-berguru/main/.claude-plugin/marketplace.json (di Claude Code pakai `curl -fsS --max-time 5`, di chat pakai alat buka link kalau ada). Kalau angkanya lebih besar dari versi panduan ini, sampaikan satu kali:
 
 "Ada versi panduan yang lebih baru ([versi]). Di Claude Code, ketik /plugin, update plugin Yuk Saling Berguru, lalu ketik /reload-plugins. Kalau setelah itu masih memakai versi lama, buka sesi baru. Di chat Claude, update plugin lalu mulai chat baru."
 
@@ -40,6 +40,7 @@ Pemeriksaan disusun berlapis supaya hasil tetap fokus. Baca hanya file referensi
 | Simulasi calon pembeli | Selalu | `references/simulasi-pembeli.md` |
 | Checklist niche | Otomatis kalau web melayani VTuber/Live2D, ilustrasi, maskot, buku anak, game asset, atau TTRPG | `references/niche.md` |
 | Cek ciri khas brand | Kalau pengguna bilang "cek ciri khas brand". Otomatis kalau web milik artist atau studio kreatif dan salah satu ini benar: folder proyek tidak punya `BLUEPRINT.md`, blueprint belum punya baris "Pembeda" dan "Alamat halaman", atau bahan hanya berupa link atau screenshot sehingga versinya tidak bisa diketahui. Dalam mode kurasi, cek ini hanya membaca dan melaporkan | `references/ciri-khas.md` |
+| Cek keterpisahan brand | Otomatis untuk setiap web milik brand, artist, atau studio. Juga kalau pengguna bilang "cek keterpisahan brand" | `references/keterpisahan.md` |
 | Kurasi ulang | Otomatis kalau ada hasil kurasi sebelumnya atau pengguna bilang "kurasi ulang"/"cek lagi" | `references/kurasi-ulang.md` |
 | Klien internasional | Otomatis kalau ada teks Inggris, harga USD, link Fiverr/Upwork/VGen, atau target luar negeri | `references/mode-lanjutan.md` bagian A |
 | Angka teknis terukur | Otomatis kalau bahan berupa link live atau kode | `references/mode-lanjutan.md` bagian B, `scripts/kontras.py` |
@@ -100,7 +101,7 @@ Skor mengikuti `references/rubrik.md`. Tambahkan skor rata-rata di bawah tabel.
 
 **Perjalanan pembeli.** Tabel hasil simulasi (format di `references/simulasi-pembeli.md`).
 
-**Lapisan tambahan.** Hanya untuk lapisan yang jalan, masing-masing satu tabel singkat: angka teknis, temuan niche, klien internasional, tracking dan legal, pesaing. Temuan yang perlu diperbaiki tidak dijelaskan panjang di sini; cukup masuk Daftar perbaikan.
+**Lapisan tambahan.** Hanya untuk lapisan yang jalan, masing-masing satu tabel singkat: angka teknis, temuan niche, keterpisahan brand, klien internasional, tracking dan legal, pesaing. Temuan yang perlu diperbaiki tidak dijelaskan panjang di sini; cukup masuk Daftar perbaikan.
 
 **Daftar perbaikan.** Tabel bernomor, urut dari yang paling berdampak ke order:
 
